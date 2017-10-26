@@ -1,4 +1,4 @@
-<svg viewBox="0 0 801 450" xmlns="http://www.w3.org/2000/svg">
+<svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 801 450" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <!-- sky (lesson: gradient) -->
         <linearGradient id="SkyGradient" x1="0" x2="0" y1="0" y2="1">
@@ -40,7 +40,7 @@
             type="translate"
             from="962 0"
             to="0 0"
-            dur="40s"
+            dur="50s"
             repeatCount="indefinite" />
     </path>
 
