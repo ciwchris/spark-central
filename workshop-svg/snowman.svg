@@ -1,0 +1,75 @@
+<svg viewBox="0 0 801 450" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- sky (lesson: gradient) -->
+        <linearGradient id="SkyGradient" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="5%" stop-color="darkblue"/>
+            <stop offset="95%" stop-color="lightblue"/>
+        </linearGradient>
+
+        <!-- pebbles (lesson: groups, use) -->
+        <g id="Pebble">
+            <circle r="4" />
+        </g>
+        <g id="SmallPebble">
+            <circle r="2" />
+        </g>
+    </defs>
+
+    <!-- border (lesson: rectangle, fill, rounded, layers) -->
+    <rect x="0" y="0" rx="5" ry="5" width="801" height="450" fill="dimgray"/>
+
+    <!-- background (lesson: gradient)  -->
+    <rect x="4" y="4" width="793" height="400" fill="url(#SkyGradient)"/>
+    <rect x="4" y="404" width="793" height="42" fill="floralwhite"/>
+  
+    <!-- sun (lesson: circle, filter)-->
+    <filter id="SunBlur">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    <circle cx="150" cy="70" r="40" fill="yellow" filter="url(#SunBlur)"/>
+
+    <!-- cloud (lesson: path, archs, opacity) -->
+    <path d="M-140 130
+             a 25 25, 0, 0, 0, 40 0
+             a 45 25, 0, 0, 0, 80 0
+             a 20 25, 0, 1, 0, 0 -50
+             a 45 25, 0, 0, 0, -120 0
+             a 20 25, 0, 1, 0, 0 50
+             Z" fill="floralwhite" opacity=".8" id="Cloud">
+        <animateTransform attributeName="transform"
+            type="translate"
+            from="962 0"
+            to="0 0"
+            dur="40s"
+            repeatCount="indefinite" />
+    </path>
+
+    <!-- snowman (lesson: circle) -->
+    <circle cx="400" cy="360" r="50" fill="floralwhite" />
+    <circle cx="400" cy="275" r="40" fill="floralwhite" />
+    <circle cx="400" cy="210" r="30" fill="floralwhite" />
+
+    <!-- snowman hat (lesson: rect) -->
+    <line x1="370" y1="178" x2="430" y2="178" stroke="black"
+        stroke-width="7" stroke-linecap="round" />
+    <rect x="380" y="140" width="40" height="35" />
+
+    <!-- snowman hat (lesson: rect) -->
+    <use x="390" y="200" href="#Pebble" />
+    <use x="410" y="200" href="#Pebble" />
+
+    <!-- snowman nose (lesson: polygon) -->
+    <polygon
+        points="395 210 400 220 405 210"
+        fill="orange" />
+
+    <!-- snowman smile, buttons (lesson: use) -->
+    <use x="390" y="225" href="#SmallPebble" />
+    <use x="396" y="230" href="#SmallPebble" />
+    <use x="404" y="230" href="#SmallPebble" />
+    <use x="410" y="225" href="#SmallPebble" />
+
+    <use x="400" y="255" href="#Pebble" />
+    <use x="400" y="275" href="#Pebble" />
+    <use x="400" y="295" href="#Pebble" />
+</svg>
