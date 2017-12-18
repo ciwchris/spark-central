@@ -655,7 +655,7 @@ Combine with transform
 Gradients
 ---------
 
-### [Linear](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient) ###
+### [Linear](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient) ###
 
 Offset: where it stops being a pure color. So 98% is the transition area.
 
@@ -770,9 +770,14 @@ same
                     &lt;stop offset="100%" stop-color="mediumorchid"/&gt;
                 &lt;/radialGradient&gt;
                 &lt;radialGradient id="RadialGradient2"&gt;
-                    &lt;stop offset="0%" stop-color="orchid"/&gt;
-                    &lt;stop offset="50%" stop-color="mediumorchid"/&gt;
-                    &lt;stop offset="100%" stop-color="violet"/&gt;
+                    &lt;stop offset="0%" stop-color="violet"/&gt;
+                    &lt;stop offset="50%" stop-color="orchid" /&gt;
+                    &lt;stop offset="100%" stop-color="mediumorchid"/&gt;
+                &lt;/radialGradient&gt;
+                &lt;radialGradient id="RadialGradient3"&gt;
+                    &lt;stop offset="0%" stop-color="violet" stop-opacity=".8"/&gt;
+                    &lt;stop offset="50%" stop-color="orchid" stop-opacity=".9"/&gt;
+                    &lt;stop offset="100%" stop-color="mediumorchid" stop-opacity=".95"/&gt;
                 &lt;/radialGradient&gt;
             &lt;/defs&gt;
 
@@ -780,19 +785,26 @@ same
                 fill="url(#RadialGradient1)" /&gt;
             &lt;circle cx="150" cy="50" r="40"
                 fill="url(#RadialGradient2)" /&gt;
+            &lt;circle cx="250" cy="50" r="40"
+                fill="url(#RadialGradient3)" /&gt;
         </pre>
     </div>
     <div>
-        <svg width="300" height="100" >
+        <svg width="400" height="100" >
             <defs>
                 <radialGradient id="RadialGradient1">
                     <stop offset="0%" stop-color="orchid"/>
                     <stop offset="100%" stop-color="mediumorchid"/>
                 </radialGradient>
                 <radialGradient id="RadialGradient2">
-                    <stop offset="0%" stop-color="orchid"/>
-                    <stop offset="50%" stop-color="mediumorchid"/>
-                    <stop offset="100%" stop-color="violet"/>
+                    <stop offset="0%" stop-color="violet"/>
+                    <stop offset="50%" stop-color="orchid" />
+                    <stop offset="100%" stop-color="mediumorchid"/>
+                </radialGradient>
+                <radialGradient id="RadialGradient3">
+                    <stop offset="0%" stop-color="violet" stop-opacity=".8"/>
+                    <stop offset="50%" stop-color="orchid" stop-opacity=".9"/>
+                    <stop offset="100%" stop-color="mediumorchid" stop-opacity=".95"/>
                 </radialGradient>
             </defs>
 
@@ -800,6 +812,8 @@ same
                 fill="url(#RadialGradient1)" />
             <circle cx="150" cy="50" r="40"
                 fill="url(#RadialGradient2)" />
+            <circle cx="250" cy="50" r="40"
+                fill="url(#RadialGradient3)" />
         </svg>
     </div>
 </div>
