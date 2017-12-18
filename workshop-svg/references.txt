@@ -1,0 +1,33 @@
+
+First explain the agenda
+    - Introduce to codepen
+    - Introduce shape for a couple minutes
+    - Experiment in codepen and follow reference for 10 minutes
+    - Repeat with next shape
+    - Last 45 minutes to create something
+
+Not going to work through the entire reference
+Can be confusing, lots of ways to do accomplish the same thing
+
+SVG: it's scable, can make the image bigger or smaller without imaging becoming blurry
+
+Codepen
+    - Creating new
+    - Maximize HTML
+    - Adjust layout (bottom/side)
+    - Drag to adjust size
+
+Learn more by looking at https://developer.mozilla.org/en-US/docs/Web/SVG
+Can look intimidating. But experiment to figure it out. Search for example usages.
+Go through the tutorial https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial
+
+If your serious about creating images you will use tools instead of creating everything by hand. But this gives you a foundation of important concepts.
+Image site that anthony sent
+
+References:
+
+https://www.sarasoueidan.com/blog/svg-transformations/
+http://svgpocketguide.com/book/
+
+https://en.wikipedia.org/wiki/Web_colors
+https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg

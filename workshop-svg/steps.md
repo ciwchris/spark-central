@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="tufte.css"/>
 <style>
 body {
-    padding-left: 0;
+    padding-left: 0 !important;
 }
 .content {
     display: flex;
@@ -54,16 +54,16 @@ Try including these other properties with lines:
         <pre>
 &lt;line x1="50" y1="30" x2="350" y2="20" stroke="slateblue"
     stroke-width="10" stroke-linecap="round" /&gt;
-&lt;line x1="240" y1="10" x2="180" y2="40" stroke="paleturquoise"
-    stroke-width="10" stroke-linecap="square" /&gt;
+&lt;line x1="240" y1="15" x2="180" y2="35" stroke="paleturquoise"
+    stroke-width="20" stroke-linecap="square" /&gt;
         </pre>
     </div>
     <div>
         <svg width="400" height="50" xmlns="http://www.w3.org/2000/svg">
             <line x1="50" y1="30" x2="350" y2="20" stroke="slateblue"
                 stroke-width="10" stroke-linecap="round" />
-            <line x1="210" y1="10" x2="190" y2="40" stroke="paleturquoise"
-                stroke-width="10" stroke-linecap="square" />
+            <line x1="210" y1="15" x2="190" y2="35" stroke="paleturquoise"
+                stroke-width="20" stroke-linecap="square" />
         </svg>
     </div>
 </div>
@@ -319,77 +319,441 @@ point to begin, `from`, where to end, `to` and the number of seconds, `dur`, for
     </div>
 </div>
 
-Polygon
--------
+Animate property: width
 
-```
-<polygon
-    points="395 210 400 220 405 210"
-    fill="orange" />
-```
+<p><svg width="400" height="100" >
+  <rect x="100" y="10" width="100" height="50" fill="aliceblue" >
+    <animate 
+      attributeName="width"
+      from="100" to="150"
+      dur="3s"
+      repeatCount="indefinite" />
+  </rect>
+</svg></p>
 
-Gradients
----------
+<p><svg width="400" height="100" >
+  <rect x="100" y="10" width="100" height="50" fill="aliceblue" >
+    <animate 
+      attributeName="width"
+      from="150" to="0"
+      dur="3s"
+      repeatCount="indefinite" />
+    <animate 
+      attributeName="height"
+      from="0" to="50"
+      dur="3s"
+      repeatCount="indefinite" />
+  </rect>
+</svg></p>
 
-```
-<linearGradient id="SkyGradient" x1="0" x2="0" y1="0" y2="1">
-    <stop offset="5%" stop-color="darkblue"/>
-    <stop offset="95%" stop-color="lightblue"/>
-</linearGradient>
-```
+Rotate:
 
-```
-<rect x="4" y="4" width="793" height="400" fill="url(#SkyGradient)"/>
-<rect x="4" y="404" width="793" height="42" fill="floralwhite"/>
-```
+<p><svg width="400" height="100" >
+    <rect x="100" y="30" width="60" height="40" fill="indigo">
+        <animateTransform attributeName="transform"
+            type="rotate"
+            dur="10s"
+            from="0 130 50"
+            to="360 130 50"
+            repeatCount="indefinite" />
+    </rect>
+</svg></p>
 
-Filters
--------
+Scale:
 
-```
-<filter id="SunBlur">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
-</filter>
-<circle cx="150" cy="70" r="40" fill="yellow" filter="url(#SunBlur)"/>
-```
+<p><svg width="400" height="100" >
+    <circle cx="0" cy="0" r="20" fill="deeppink" transform="translate(100 50)">
+        <animateTransform attributeName="transform"
+            type="scale"
+            additive="sum"
+            dur="3s"
+            from=".5 .5"
+            to="2 2"
+            repeatCount="indefinite" />
+    </circle>
+</svg></p>
 
-Groups and Use
---------------
+Transform:
 
-```
-<g id="Pebble">
-    <circle r="4" />
-</g>
-<g id="SmallPebble">
-    <circle r="2" />
-</g>
-```
+translate
+
+<p><svg width="400" height="100" >
+    <rect x="100" y="30" width="60" height="40" fill="pink" />
+    <rect x="100" y="30" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="translate(10 10)" />
+</svg></p>
+
+Scale, but have to adjust position
+
+<p><svg width="400" height="100" >
+    <rect x="100" y="30" width="60" height="40" fill="pink" />
+    <rect x="55" y="20" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="scale(2 2)" />
+</svg></p>
+
+Use translate and scale so you don't have to adjust
+
+<p><svg width="400" height="100" >
+    <rect x="100" y="30" width="60" height="40" fill="pink" />
+    <rect x="0" y="0" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="translate(110 40) scale(2 2)" />
+</svg></p>
+
+rotate
+
+<p><svg width="400" height="100" >
+    <rect x="100" y="30" width="60" height="40" fill="pink" />
+    <rect x="100" y="30" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="rotate(45 100 30)" />
+</svg></p>
+
+skewX skewY
+
+<p><svg width="400" height="100" >
+    <rect x="10" y="10" width="60" height="40" fill="pink" />
+    <rect x="0" y="0" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="translate(20 20) skewX(10)" />
+
+    <rect x="100" y="10" width="60" height="40" fill="pink" />
+    <rect x="0" y="0" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="translate(110 20) skewY(10)" />
+
+    <rect x="200" y="10" width="60" height="40" fill="pink" />
+    <rect x="0" y="0" width="60" height="40" fill="mediumvioletred" fill-opacity=".8" transform="translate(210 20) skewX(10) skewY(10)" />
+</svg></p>
+
+<h2>Polygon</h2>
+
+Straight lines
+
+<p><svg width="400" height="100" >
+    <polygon points="100 20 200 90 300 50 200 0" fill="orange" />
+</svg></p>
+
+<p><svg width="400" height="100" >
+    <polygon points="100 50 130 100 180 60 220 80 300 50 220 20 180 40 130 0" fill="paleturquoise" />
+</svg></p>
+
+<p><svg width="400" height="200" >
+    <polygon points="0 50 30 100 80 60 120 80 200 50 120 20 80 40 30 0" fill="paleturquoise" transform="translate(200 0) rotate(90)" />
+</svg></p>
+
+<p><code>
 
 
-Paths and Archs
----------------
+<h2>Gradients</h2>
 
-```
-<path d="M-140 130
-         a 25 25, 0, 0, 0, 40 0
-         a 45 25, 0, 0, 0, 80 0
-         a 20 25, 0, 1, 0, 0 -50
-         a 45 25, 0, 0, 0, -120 0
-         a 20 25, 0, 1, 0, 0 50
-         Z" fill="floralwhite" opacity=".8" id="Cloud">
-    <animateTransform attributeName="transform"
-        type="translate"
-        from="962 0"
-        to="0 0"
-        dur="50s"
-        repeatCount="indefinite" />
-</path>
-```
+Offset: where it stops being a pure color. So 98% is the transition area.
+<p><svg width="450" height="100" >
+    <defs>
+        <linearGradient id="NoBlur">
+            <stop offset="50%" stop-color="darkblue"/>
+            <stop offset="50%" stop-color="deepskyblue"/>
+        </linearGradient>
+        <linearGradient id="Blur">
+            <stop offset="0%" stop-color="darkblue"/>
+            <stop offset="100%" stop-color="deepskyblue"/>
+        </linearGradient>
+        <linearGradient id="MultiBlur">
+            <stop offset="0%" stop-color="darkblue"/>
+            <stop offset="50%" stop-color="dodgerblue"/>
+            <stop offset="100%" stop-color="deepskyblue"/>
+        </linearGradient>
+    </defs>
 
-View Box
---------
+    <rect x="0" y="0" width="150" height="100" fill="url(#NoBlur)"/>
+    <rect x="150" y="0" width="150" height="100" fill="url(#Blur)"/>
+    <rect x="300" y="0" width="150" height="100" fill="url(#MultiBlur)"/>
+</svg></p>
 
-```
-<svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 801 450" xmlns="http://www.w3.org/2000/svg">
+Can't reuse ids
+
+<p><svg width="400" height="100" >
+    <defs>
+        <linearGradient id="CornerBlur" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="darkblue"/>
+            <stop offset="100%" stop-color="deepskyblue"/>
+        </linearGradient>
+        <linearGradient id="CornerBlurReverse" x1="0" y1="1" x2="1" y2=".5">
+            <stop offset="0%" stop-color="deepskyblue"/>
+            <stop offset="100%" stop-color="darkblue"/>
+        </linearGradient>
+    </defs>
+
+    <rect x="0" y="0" width="200" height="100" fill="url(#CornerBlur)"/>
+    <rect x="200" y="0" width="200" height="100" fill="url(#CornerBlurReverse)"/>
+</svg></p>
+
+Radial
+<p>
+<svg width="300" height="100" >
+    <defs>
+        <radialGradient id="RadialGradient1">
+            <stop offset="0%" stop-color="orchid"/>
+            <stop offset="100%" stop-color="mediumorchid"/>
+        </radialGradient>
+        <radialGradient id="RadialGradient2">
+            <stop offset="0%" stop-color="orchid"/>
+            <stop offset="50%" stop-color="mediumorchid"/>
+            <stop offset="100%" stop-color="violet"/>
+        </radialGradient>
+    </defs>
+
+    <circle cx="50" cy="50" r="40" fill="url(#RadialGradient1)" />
+    <circle cx="150" cy="50" r="40" fill="url(#RadialGradient2)" />
 </svg>
-```
+</p>
+
+Change location of
+
+<p>
+<svg width="300" height="100" >
+    <defs>
+        <radialGradient id="Gradient1" r=".3">
+            <stop offset="10%" stop-color="orangered"/>
+            <stop offset="100%" stop-color="lightgoldenrodyellow"/>
+        </radialGradient>
+        <radialGradient id="Gradient2" r=".3" cx=".3" cy=".7">
+            <stop offset="10%" stop-color="orangered"/>
+            <stop offset="100%" stop-color="lightgoldenrodyellow"/>
+        </radialGradient>
+        <radialGradient id="Gradient3" r=".3" cx=".3" cy=".7" fx=".35" fy=".6">
+            <stop offset="10%" stop-color="orangered"/>
+            <stop offset="100%" stop-color="lightgoldenrodyellow"/>
+        </radialGradient>
+    </defs>
+
+    <rect x="0" y="0" width="100" height="100" fill="url(#Gradient1)" />
+    <rect x="100" y="0" width="100" height="100" fill="url(#Gradient2)" />
+    <rect x="200" y="0" width="100" height="100" fill="url(#Gradient3)" />
+</svg>
+</p>
+
+Combine with animation (have them try?)
+
+<p><svg width="400" height="150" >
+    <defs>
+        <radialGradient id="AnimatedGradient">
+            <stop offset="1%" stop-color="hotpink"/>
+            <stop offset="99%" stop-color="deeppink"/>
+        </radialGradient>
+    </defs>
+
+    <circle fill="url(#AnimatedGradient)" cx="0" cy="0" r="30" transform="translate(100 75)">
+        <animateTransform attributeName="transform"
+            type="scale"
+            additive="sum"
+            dur="3s"
+            from=".5 .5"
+            to="2 2"
+            repeatCount="indefinite" />
+    </circle>
+</svg></p>
+
+<p><svg width="400" height="200" >
+    <defs>
+        <radialGradient id="PolygonGradient" r=".7" cx=".2" >
+            <stop offset="1%" stop-color="paleturquoise"/>
+            <stop offset="99%" stop-color="deepskyblue"/>
+        </radialGradient>
+    </defs>
+
+    <polygon points="0 50 30 100 80 60 120 80 200 50 120 20 80 40 30 0"
+        fill="url(#PolygonGradient)"
+        transform="translate(200 0) rotate(90)" />
+</svg></p>
+
+<h2>Filters</h2>
+
+<p><svg width="400" height="150" >
+    <filter id="SameBlur">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+    <filter id="DifferingBlur">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5 0" />
+    </filter>
+    <circle cx="50" cy="75" r="40" fill="springgreen"/>
+    <circle cx="150" cy="75" r="40" fill="springgreen" filter="url(#SameBlur)"/>
+    <circle cx="250" cy="75" r="40" fill="springgreen" filter="url(#DifferingBlur)"/>
+</svg></p>
+
+
+ <svg width="400" height="150">
+  <defs>
+    <filter id="DropShadow" x="0" y="0" width="150%" height="150%">
+      <feOffset result="offsetOut" in="SourceAlpha" dx="8" dy="8" />
+      <feGaussianBlur result="blurOut" in="offsetOut" stdDeviation="6" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+  </defs>
+  <rect width="90" height="90" rx="5" ry="5" fill="darkcyan" filter="url(#DropShadow)" />
+</svg> 
+
+<h2>Groups and Use</h2>
+
+
+<p>
+<svg width="400" height="75">
+    <g fill="gold" transform="rotate(25) translate(40 0)">
+        <circle cx="20" cy="15" r="8" />
+        <circle cx="37" cy="15" r="6" />
+        <circle cx="50" cy="15" r="4" />
+        <circle cx="60" cy="15" r="2" />
+    </g>
+</svg>
+</p>
+Facing
+<p>
+<svg width="400" height="150">
+    <def>
+        <g id="Dots1" fill="gold">
+            <circle r="8" />
+            <circle r="6" transform="translate(17 0)" />
+            <circle r="4" transform="translate(30 0)" />
+            <circle r="2" transform="translate(40 0)" />
+        </g>
+    </def>
+    <use href="#Dots1" transform="translate(50 20) rotate(20)"/>
+    <use href="#Dots1" transform="translate(140 20) rotate(160)"/>
+</svg>
+</p>
+
+<h2>Paths and Archs</h2>
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+
+M: absolute move to
+h: relative horizontal
+v: relative vertical
+Z: connect end to start
+
+<p>
+<svg width="200" height="100">
+    <path d="M10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="royalblue" stroke-width="10"/>
+</svg>
+</p>
+
+a: arch (a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy)
+two ellipses that can connect any two points
+long either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available.
+
+<p>
+<svg width="400" height="150">
+    <path d="M10 10 a 1 1 0 0 0 100 0" fill="cadetblue" stroke="cadetblue" stroke-width="5"/>
+    <path d="M120 10 a 5 1 0 0 0 100 0" fill="lightseagreen" stroke="lightseagreen" stroke-width="5"/>
+    <path d="M240 10 a 1 2 0 0 0 100 0" fill="mediumseagreen" stroke="mediumseagreen" stroke-width="5"/>
+</svg>
+</p>
+Set a different y ending position
+<p>
+<svg width="400" height="150">
+    <path d="M10 10 a 1 1 0 0 0 100 20" fill="fuchsia" stroke="fuchsia" stroke-width="5"/>
+    <path d="M150 10 a 5 1 0 0 0 100 20" fill="deeppink" stroke="deeppink" stroke-width="5"/>
+    <path d="M270 10 a 1 2 0 0 0 100 20" fill="mediumvioletred" stroke="mediumvioletred" stroke-width="5"/>
+</svg>
+</p>
+
+
+The third parameter describes the rotation of the arc
+<p>
+<svg width="650" height="110">
+    <path d="M30 0 a 2 1 0 0 0 100 0" fill="coral" stroke="coral" stroke-width="5"/>
+    <path d="M150 0 a 2 1 22 0 0 100 0" fill="orange" stroke="orange" stroke-width="5"/>
+    <path d="M280 0 a 2 1 45 0 0 100 0" fill="darkorange" stroke="darkorange" stroke-width="5"/>
+    <path d="M410 0 a 2 1 57 0 0 100 0" fill="tomato" stroke="tomato" stroke-width="5"/>
+    <path d="M540 0 a 2 1 90 0 0 100 0" fill="orangered" stroke="orangered" stroke-width="5"/>
+</svg>
+</p>
+
+The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around. 
+
+<p>
+<svg width="460" height="210">
+    <path d="M10 110 a 60 60 0 0 0 100 0" fill="aqua" stroke="aqua" stroke-width="5"/>
+    <path d="M120 110 a 60 60 0 0 1 100 0" fill="aquamarine" stroke="aquamarine" stroke-width="5"/>
+    <path d="M230 110 a 60 60 0 1 0 100 0" fill="palegreen" stroke="palegreen" stroke-width="5"/>
+    <path d="M340 110 a 60 60 0 1 1 100 0" fill="greenyellow" stroke="greenyellow" stroke-width="5"/>
+</svg>
+</p>
+
+<p>
+<svg width="400" height="130">
+    <path d="M40 40 a 45 45 0 0 0 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+    <path d="M140 40 a 45 45 0 1 0 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+</svg>
+</p>
+<p>
+<svg width="400" height="100">
+    <path d="M40 40 a 45 45 0 0 0 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+    <path d="M140 40 a 45 45 0 0 1 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+</svg>
+</p>
+<p>
+<svg width="400" height="130">
+    <path d="M40 100 a 45 45 0 0 0 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+    <path d="M140 100 a 45 45 0 1 1 50 0" fill="transparent" stroke="crimson" stroke-width="5"/>
+</svg>
+</p>
+
+It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle.
+<p>
+<svg width="325" height="125">
+  <path d="M55 25
+           A 45 45, 0, 0, 0, 0 70" fill="green"/>
+  <path d="M100 25
+           A 45 45, 0, 1, 0, 145 70" fill="red"/>
+  <path d="M155 25
+           A 45 45, 0, 0, 1, 200 70" fill="purple"/>
+  <path d="M270 25
+           A 45 45, 0, 1, 1, 215 70" fill="blue"/>
+</svg>
+</p>
+
+<p>
+<svg width="325" height="125">
+  <path d="M80 30
+           A 45 45, 0, 1, 0, 125 75" fill="red"/>
+  <path d="M85 25
+           A 45 45, 0, 0, 1, 130 70" fill="purple"/>
+  <path d="M195 25
+           A 45 45, 0, 0, 0, 140 70" fill="green"/>
+  <path d="M200 30
+           A 45 45, 0, 1, 1, 145 75" fill="blue"/>
+</svg>
+</p>
+
+<h2>View Box</h2>
+
+Zooming
+
+<p>
+<svg width="250" height="250" viewBox="0 0 250 250">
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+<svg width="250" height="250" viewBox="0 0 120 125" >
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+<svg width="250" height="250" viewBox="0 0 500 500" >
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+</p>
+
+Different starting
+
+<p>
+<svg width="250" height="250" viewBox="50 25 250 250">
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+<svg width="250" height="250" viewBox="25 12 125 125" >
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+<svg width="250" height="250" viewBox="100 50 500 500" >
+    <rect width="200%" height="200%" fill="lightsteelblue"/>
+    <rect x="5" y="5" rx="5" ry="5" width="100" height="100" fill="springgreen"/>
+    <circle cx="150" cy="150" r="50" fill="greenyellow" />
+</svg>
+</p>
