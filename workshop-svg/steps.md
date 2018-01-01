@@ -885,8 +885,7 @@ Animation with gradient
                 &lt;/radialGradient&gt;
             &lt;/defs&gt;
 
-            &lt;circle fill="url(#AnimatedGradient)"
-                cx="0" cy="0" r="30" transform="translate(100 75)"&gt;
+            &lt;circle fill="url(#AnimatedGradient)" cx="0" cy="0" r="30" transform="translate(100 75)"&gt;
                 &lt;animateTransform attributeName="transform"
                     type="scale"
                     additive="sum"
@@ -898,7 +897,7 @@ Animation with gradient
         </pre>
     </div>
     <div>
-        <svg width="400" height="150" >
+        <svg width="200" height="150" >
             <defs>
                 <radialGradient id="AnimatedGradient">
                     <stop offset="1%" stop-color="hotpink"/>
@@ -906,8 +905,7 @@ Animation with gradient
                 </radialGradient>
             </defs>
 
-            <circle fill="url(#AnimatedGradient)"
-                cx="0" cy="0" r="30" transform="translate(100 75)">
+            <circle fill="url(#AnimatedGradient)" cx="0" cy="0" r="30" transform="translate(100 75)">
                 <animateTransform attributeName="transform"
                     type="scale"
                     additive="sum"
@@ -926,8 +924,7 @@ Polygon with gradient
     <div>
         <pre>
             &lt;defs&gt;
-                &lt;radialGradient id="PolygonGradient"
-                    r=".7" cx=".2" &gt;
+                &lt;radialGradient id="PolygonGradient" r=".7" cx=".2" &gt;
                     &lt;stop offset="1%" stop-color="paleturquoise"/&gt;
                     &lt;stop offset="99%" stop-color="deepskyblue"/&gt;
                 &lt;/radialGradient&gt;
@@ -942,8 +939,7 @@ Polygon with gradient
     <div>
         <svg width="400" height="200" >
             <defs>
-                <radialGradient id="PolygonGradient"
-                    r=".7" cx=".2" >
+                <radialGradient id="PolygonGradient" r=".7" cx=".2" >
                     <stop offset="1%" stop-color="paleturquoise"/>
                     <stop offset="99%" stop-color="deepskyblue"/>
                 </radialGradient>
