@@ -2,7 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
+
         <link rel="stylesheet" type="text/css" href="codemirror.css">
+        <link rel="stylesheet" type="text/css" href="tufte.css"/>
+
         <style>
         body {
             padding-left: 0 !important;
@@ -15,17 +18,6 @@
             margin-bottom: 0;
             line-height: 1;
         }
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            border: 3px dashed salmon;
-            border-radius: 5px;
-            padding: 10px;
-        }
-        pre {
-            font-size: .8rem;
-        }
         .code {
             background-color: beige;
             padding: 2px 6px;
@@ -37,19 +29,22 @@
             font-weight: bold;
             padding: 2px 5px;
         }
+        div.CodeMirror {
+            border-color: goldenrod;
+            background-color: wheat;
+        }
         </style>
     </head>
-<p><link rel="stylesheet" href="https://edwardtufte.github.io/tufte-css/tufte.css"/></p>
+    <body>
 
 
-
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line">Lines</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line">Lines</a></h2>
 
 <p>Draw lines from first point (x1, y1) to second point (x2, y2)</p>
 
 <ul>
-<li>Set the color of the line: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke"><code>stroke="green"</code></a></span></li>
-<li><span class="try">Try</span> different <a href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">color names</a></li>
+<li>Set the color of the line: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke"><code>stroke="green"</code></a></span></li>
+<li><span class="try">Try</span> different <a target="blank" href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">color names</a></li>
 </ul>
 
 
@@ -63,9 +58,9 @@
 <p><span class="try">Try</span> including these other attributes with lines:</p>
 
 <ul>
-<li>Line size: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width"><code>stroke-width="10"</code></a></span></li>
-<li>How line starts and ends (values: butt, round, square): <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap"><code>stroke-linecap="round"</code></a></span></li>
-<li><span class="try">Try</span> drawing multiple lines</li>
+<li>Line size: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width"><code>stroke-width="10"</code></a></span></li>
+<li>How line starts and ends (values: butt, round, square): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap"><code>stroke-linecap="round"</code></a></span></li>
+<li>Try drawing multiple lines</li>
 </ul>
 
 
@@ -79,7 +74,7 @@
 </div>
 
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Rectangles</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Rectangles</a></h2>
 
 <p>Draw rectangles from upper left point (x, y) with a width and height</p>
 
@@ -94,11 +89,11 @@
 
 <ul>
 <li>Round corners: <span class="code"><code>rx="5" ry="5"</code></span></li>
-<li>Color: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill"><code>fill="dimgray"</code></a></span></li>
+<li>Color: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill"><code>fill="dimgray"</code></a></span></li>
 <li>Transparent: <span class="code"><code>fill="transparent"</code></span></li>
 <li>Border color and size: <span class="code"><code>stroke="orchid" stroke-width="5"</code></span></li>
-<li>Make it see through (values: 0.0-1.0): <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-opacity"><code>fill-opacity=".5"</code></a></span></li>
-<li>Also make borders see through (values: 0.0-1.0): <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/opacity"><code>opacity=".5"</code></a></span></li>
+<li>Make it see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-opacity"><code>fill-opacity=".5"</code></a></span></li>
+<li>Also make borders see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/opacity"><code>opacity=".5"</code></a></span></li>
 </ul>
 
 
@@ -122,7 +117,7 @@
 </div>
 
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle">Circles</a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse">Ellipses</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle">Circles</a> &amp; <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse">Ellipses</a></h2>
 
 <p>Draw circles at a point (cx, cy) with a radius</p>
 
@@ -154,7 +149,7 @@
 </div>
 
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text">Text</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text">Text</a></h2>
 
 <p>Add text to images at the point (x, y)</p>
 
@@ -170,9 +165,9 @@
 <p><span class="try">Try</span> including these other attributes with text:</p>
 
 <ul>
-<li>Stretch text to a length: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/textLength"><code>textLength="300"</code></a></span></li>
-<li>Change how text stretches (values: spacing, spacingAndGlyphs): <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/lengthAdjust"><code>lengthAdjust="spacing"</code></a></span></li>
-<li>Rotate the text: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rotate"><code>rotate="10"</code></a></span></li>
+<li>Stretch text to a length: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/textLength"><code>textLength="300"</code></a></span></li>
+<li>Change how text stretches (values: spacing, spacingAndGlyphs): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/lengthAdjust"><code>lengthAdjust="spacing"</code></a></span></li>
+<li>Rotate the text: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rotate"><code>rotate="10"</code></a></span></li>
 </ul>
 
 
@@ -195,7 +190,7 @@
 </div>
 
 
-<p><span class="try">Try</span> using the other attributes you&rsquo;ve learned</p>
+<p><span class="try">Try</span> using the other attributes you&rsquo;ve learned.</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -208,7 +203,7 @@
 </div>
 
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">Transform</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">Transform</a></h2>
 
 <p>Transforms modify the position of items they are applied to. The three transforms are translate, scale, rotate and skew.</p>
 
@@ -286,7 +281,7 @@
 </div>
 
 
-<h3>Bonus: Skew</h3>
+<h3>Skew</h3>
 
 <p>Skew pulls an image in a direction. For a rectangle it will pull the bottom right corner in either the x or y direction.</p>
 
@@ -322,16 +317,16 @@
 
 <h2>Animation</h2>
 
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">Animate an attribute</a></h3>
+<h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">Animate an attribute</a></h3>
 
 <p>Changes an attribute of an item over a length of time. For example, the width of a rectangle can grow from a smaller size to a larger size. We use the <code>animate</code> within an item and the <code>attributeName</code> attribute to tell what attribute of the item to animate. We will tell the animation the beginning value, <code>from</code>, the ending value, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
 
 <ul>
-<li>Attribute to animate: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeName"><code>attributeName="width"</code></a></span></li>
-<li>Begin: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="100"</code></a></span></li>
-<li>End: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="150"</code></a></span></li>
-<li>How long: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur"><code>dur="3s"</code></a></span></li>
-<li>How many times to perform the animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount"><code>repeatCount="indefinite"</code></a></span></li>
+<li>Attribute to animate: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeName"><code>attributeName="width"</code></a></span></li>
+<li>Begin: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="100"</code></a></span></li>
+<li>End: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="150"</code></a></span></li>
+<li>How long: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur"><code>dur="3s"</code></a></span></li>
+<li>How many times to perform the animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount"><code>repeatCount="indefinite"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -374,18 +369,18 @@
 <p><span class="try">Try</span> animating the font-size, rotate and stroke-width attributes of a text item. <span class="try">Try</span> animating other items and attributes.</p>
 
 
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform">Animation transforms</a></h3>
+<h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform">Animation transforms</a></h3>
 <h4>Translate</h4>
 
 <p>Move an item from one location to another and have the movement occur over a length of time.
 The type of movement we will perform is called <code>translate</code>. Similarly to the <code>animate</code> element we will tell the animation what point to begin, <code>from</code>, what point to end, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
 
 <ul>
-<li>The type of animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="translate"</code></a></span></li>
-<li>The beginning (x, y) point: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
-<li>The ending (x, y) point: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
-<li>How long: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur"><code>dur="10s"</code></a></span></li>
-<li>How many times to perform the animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount"><code>repeatCount="indefinite"</code></a></span></li>
+<li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="translate"</code></a></span></li>
+<li>The beginning (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
+<li>The ending (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
+<li>How long: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur"><code>dur="10s"</code></a></span></li>
+<li>How many times to perform the animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount"><code>repeatCount="indefinite"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -407,9 +402,9 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 <p>Rotates an item from a starting degree at an (x, y) point to an ending degree to another (x, y) point.</p>
 
 <ul>
-<li>The type of animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="rotate"</code></a></span></li>
-<li>The beginning degree and (x, y) point: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
-<li>The ending degree and (x, y) point: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
+<li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="rotate"</code></a></span></li>
+<li>The beginning degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
+<li>The ending degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -430,10 +425,10 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 <p>Changes the size of an item. Once again, when an item is scaled the items position will also change. Therefore we once again use the <code>translate</code> transform to position the item. For the animation there is one additional attribute which needs to be set. The <code>additive</code> attribute will be set to <code>sum</code>, so that the animation does not override the position set.</p>
 
 <ul>
-<li>The type of animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="scale"</code></a></span></li>
-<li>The beginning size in the x and y direction: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
-<li>The ending size in the x and y direction: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
-<li>Use the translate position with the animation: <span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive"><code>additive="sum"</code></a></span></li>
+<li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="scale"</code></a></span></li>
+<li>The beginning size in the x and y direction: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
+<li>The ending size in the x and y direction: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
+<li>Use the translate position with the animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive"><code>additive="sum"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -452,9 +447,9 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p><span class="try">Try</span> combining these animations with other items. <span class="try">Try</span> creating multiple items each with their own animation.</p>
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon">Polygon</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon">Polygon</a></h2>
 <p>Custom shapes can be created by specifying a series of (x, y) 
-<span class="code"><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/point"><code>points.</code></a></span> The last point will automatically connect to the first point.</p>
+<span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/point"><code>points.</code></a></span> The last point will automatically connect to the first point.</p>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
@@ -491,17 +486,18 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h2>Gradients</h2>
 
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">Linear</a></h3>
+<h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">Linear</a></h3>
 
 <p>Gradients transition an item from one color to another color. <code>Linear</code> gradients transition the color in a straight line from left to right by default. The first <code>offset</code> is used to specify what percent along the straight line the color should begin the transition. The next <code>offset</code> is when the next color will end the transition.</p>
 
-<p>The gradient information is specified by itself in a <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">defs</a></code> section, definition section. Each definition has an <code><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/id">id</a></code> attribute which then can be used on an item to apply the gradient to that item.</p>
+<p>The gradient information is specified by itself in a <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">defs</a></code> section, definition section. Each definition has an <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/id">id</a></code> attribute which then can be used on an item to apply the gradient to that item.</p>
 
 
 <ul>
 <li>The id of the gradient: <span class="code"><code>linearGradient id="NoBlur"</code></span></li>
 <li>The first offset begins transitioning away from the color darkblue immediately: <span class="code"><code>stop offset="0%" stop-color="darkblue"</code></span></li>
 <li>The next offset ends the color transition, resulting in the color only becoming deepskyblue at the very end of the item: <span class="code"><code>stop offset="100%" stop-color="deepskyblue"</code></span></li>
+<li>The gradient to apply to the item: <span class="code"><code>fill="url(#CompleteGradient)"</code></span></li>
 </ul>
 
 <div class="html">
@@ -567,9 +563,15 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p><span class="try">Try</span> adjusting the direction of the gradient on items.</p>
 
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient">Radial</a></h3>
+<h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient">Radial</a></h3>
 
-<p>Radial gradients transition from one color to another starting at a point and moving outwards in all directions.</p>
+<p>Radial gradients transition from one color to another starting at a point and moving outwards in all directions. Radial gradients are specified the same way as linear gradients.</p>
+
+<p>An opacity, making the color see through, can also be used with a gradient.</p>
+
+<ul>
+<li>Make it see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-opacity"><code>stop-opacity=".8"</code></a></span></li>
+</ul>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
@@ -599,37 +601,45 @@ The type of movement we will perform is called <code>translate</code>. Similarly
     &lt;/svg&gt;
 </div>
 
+<p>How far the gradient extends as well as the location of the gradient and its focal point can be adjusted.</p>
 
-<p>Change location of</p>
+<ul>
+<li>How far the gradient extends, .5 is the default: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">r=".3"</a></code></span></li>
+<li>The center: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx">cx=".3" cy=".7"</a></code></span></li>
+<li>The focal point: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fx">fx=".35" fy=".6"</a></code></span></li>
+</ul>
+
+<p>In these examples radial gradients are positioned within rectangles. The first specifies how far the gradient extends. The second sets the center of the gradient. The third adjusts where the gradient is focused.</p>
 
 <div class="html">
-    &lt;svg width="400" height="100"&gt;
+    &lt;svg width="400" height="120"&gt;
         &lt;defs&gt;
-            &lt;radialGradient id="Gradient1" r=".3"&gt;
+            &lt;radialGradient id="PositionGradient1" r=".3"&gt;
                 &lt;stop offset="10%" stop-color="orangered"/&gt;
                 &lt;stop offset="100%" stop-color="lightgoldenrodyellow"/&gt;
             &lt;/radialGradient&gt;
-            &lt;radialGradient id="Gradient2" r=".3" cx=".3" cy=".7"&gt;
+            &lt;radialGradient id="PositionGradient2" r=".3" cx=".3" cy=".7"&gt;
                 &lt;stop offset="10%" stop-color="orangered"/&gt;
                 &lt;stop offset="100%" stop-color="lightgoldenrodyellow"/&gt;
             &lt;/radialGradient&gt;
-            &lt;radialGradient id="Gradient3" r=".3" cx=".3" cy=".7" fx=".35" fy=".6"&gt;
+            &lt;radialGradient id="PositionGradient3" r=".3" cx=".3" cy=".7" fx=".35" fy=".6"&gt;
                 &lt;stop offset="10%" stop-color="orangered"/&gt;
                 &lt;stop offset="100%" stop-color="lightgoldenrodyellow"/&gt;
             &lt;/radialGradient&gt;
         &lt;/defs&gt;
 
         &lt;rect x="0" y="10" width="100" height="100"
-            fill="url(#Gradient1)" /&gt;
+            fill="url(#PositionGradient1)" /&gt;
         &lt;rect x="100" y="10" width="100" height="100"
-            fill="url(#Gradient2)" /&gt;
+            fill="url(#PositionGradient2)" /&gt;
         &lt;rect x="200" y="10" width="100" height="100"
-            fill="url(#Gradient3)" /&gt;
+            fill="url(#PositionGradient3)" /&gt;
     &lt;/svg&gt;
 </div>
 
+<p><span class="try">Try</span> applying these attributes to your own images.</p>
 
-<p>Animation with gradient</p>
+<p><span class="try">Try</span> combining gradients with other items you have learned. Here are two examples which include a gradient to an image we've already seen.</p>
 
 <div class="html">
     &lt;svg width="400" height="150"&gt;
@@ -653,9 +663,6 @@ The type of movement we will perform is called <code>translate</code>. Similarly
     &lt;/svg&gt;
 </div>
 
-
-<p>Polygon with gradient</p>
-
 <div class="html">
     &lt;svg width="400" height="200"&gt;
         &lt;defs&gt;
@@ -674,30 +681,35 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 </div>
 
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">Filters</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">Filters</a></h2>
 
-<p>SourceGraphic</p>
+<p>Filters provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">This is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
+
+<ul>
+<li>How much to blur the image. If one value is supplied to blur both the x and y directions the same, else use first value for the x direction and the second value for the y direction: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
+</ul>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
         &lt;circle cx="50" cy="50" r="40" fill="springgreen"/&gt;
 
         &lt;filter id="SameBlur"&gt;
-            &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5" /&gt;
+            &lt;feGaussianBlur stdDeviation="5" /&gt;
         &lt;/filter&gt;
         &lt;circle cx="150" cy="50" r="40" fill="springgreen"
             filter="url(#SameBlur)"/&gt;
 
         &lt;filter id="DifferingBlur"&gt;
-            &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5 0" /&gt;
+            &lt;feGaussianBlur stdDeviation="5 0" /&gt;
         &lt;/filter&gt;
         &lt;circle cx="250" cy="50" r="40" fill="springgreen"
             filter="url(#DifferingBlur)"/&gt;
     &lt;/svg&gt;
 </div>
 
+<p><span class="try">Try</span> applying this filter to an item you create. Adjust the <code>stdDeviation</code> value to see how it affects your item.</p>
 
-<p>Drop shadow</p>
+<p>One unique affect filters can be used for is for creating a shadow underneath an item, known as a drop shadow. This is a more complex example which applies one filter, takes the result and feeds it into another filter who's result is fed into yet another filter. The <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/in">in</a></code> and <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/result">result</a></code> attributes are what makes this possible.</p>
 
 <div class="html">
     &lt;svg width="200" height="150"&gt;
@@ -715,14 +727,15 @@ The type of movement we will perform is called <code>translate</code>. Similarly
     &lt;/svg&gt;
 </div>
 
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">Groups</a> and <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">Use</a></h2>
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">Groups</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">Use</a></h2>
+<p>Several items can be created within a group. This allows you to treat the entire group as a single item.</p>
 
-<p>Grouping</p>
+<p>In this example four circles are created. Then as a group they are moved to another location and rotated</p>
 
 <div class="html">
     &lt;svg width="400" height="75"&gt;
-        &lt;g fill="gold" transform="rotate(25) translate(40 0)"&gt;
+        &lt;g fill="gold" transform="translate(40 0) rotate(25)"&gt;
             &lt;circle cx="20" cy="15" r="8" /&gt;
             &lt;circle cx="37" cy="15" r="6" /&gt;
             &lt;circle cx="50" cy="15" r="4" /&gt;
@@ -731,8 +744,14 @@ The type of movement we will perform is called <code>translate</code>. Similarly
     &lt;/svg&gt;
 </div>
 
+<p>A group can also be defined and then used elsewhere. The group can also be used multiple times.</p>
 
-<p>Using</p>
+<p>In this example a group of circles are defined. Then the group is used twice, but they are place at different positions and are rotated differently.</p>
+
+<ul>
+<li>Define a group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">g id="DotsTransformed"</a></code></span></li>
+<li>Use the defined group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">use href="#DotsTransformed"</a></code></span></li>
+</ul>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -744,12 +763,15 @@ The type of movement we will perform is called <code>translate</code>. Similarly
                 &lt;circle r="2" transform="translate(40 0)" /&gt;
             &lt;/g&gt;
         &lt;/def&gt;
+
         &lt;use href="#DotsTransformed" transform="translate(50 20) rotate(20)"/&gt;
         &lt;use href="#DotsTransformed" transform="translate(140 20) rotate(160)"/&gt;
     &lt;/svg&gt;
 </div>
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">View box</a></h2>
+<p><span class="try">Try</span> defining a group of items. Then use it multiple times. Make each usage a little different than other usages. For example what happens if you apply a gradient to the group or animate the group?</p>
+
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">Viewbox</a></h2>
 
 <p>The <code>viewBox</code> attribute allows you to change how the image is viewed. The first two values is the (x, y) point to begin viewing the image at. For example, if an image has a width of 100 and height of 100 then if a <code>viewBox</code> of <code>10 10</code> is used then the view of the image will be shifted both in the x and y positions 10 points into the image.</p>
 
@@ -815,12 +837,10 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p><span class="try">Try</span> different <code>viewBox</code> widths and heights. Also <span class="try">try</span> different starting points for viewing the image.</p>
 
-<h2><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">Paths and Archs</a></h2>
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">Paths and Archs</a></h2>
+<p>Paths and archs are a more challenging topic. They allow for the creation of complex images. Below are some of the basics and show how they work. When working with paths and arks most of the time another tool will be used which generates the image for you and outputs the SVG information.</p>
 
-<p>M: absolute move to
-h: relative horizontal
-v: relative vertical
-Z: connect end to start</p>
+<p>This first example shows you a square can be created using paths. The starting point is specified at an (x, y) position using <code>M10 10</code>, the absolute (x, y) point. Next <code>h 80</code> is used to draw a horizontal line to the right, relative to the previous point. <code>v 80</code> does this same thing, except it draws a vertical line down. <code>h -80</code> draws a line from right to left. Finally <code>Z</code> completes the rectangle by automatically connecting the last point to the first point.</p>
 
 <div class="html">
     &lt;svg width="200" height="100"&gt;
@@ -832,9 +852,19 @@ Z: connect end to start</p>
 </div>
 
 
-<p>a: arch (a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy)
-two ellipses that can connect any two points
-long either of those circles there are two possible paths that you can take to connect the points, so in any situation there are four possible arcs available.</p>
+<p>Archs are created using seven separate values. <p>
+
+<ul>
+<li>rx: radius in the x direction: <span class="code"><code>M10 10 a 1 0 0 0 0 0 0</code></span></li>
+<li>ry: radius in the y direction: <span class="code"><code>ry</code>M10 10 a 1 1 0 0 0 0 0</span></li>
+<li>x-axis-rotation: rotation of the arc: <span class="code"><code>M10 10 a 1 1 45 0 0 0 0</code></span></li>
+<li>large-arc-flag: begin moving at positive or negative angles<span class="code"><code>M10 10 a 1 1 45 1 0 0 0</code></span></li>
+<li>sweep-flag: direction the arc will travel around a given circle: <span class="code"><code>M10 10 a 1 1 45 1 1 0 0</code></span></li>
+<li>dx: ending x location: <span class="code"><code>M10 10 a 1 1 45 1 1 100 0</code></span></li>
+<li>dy: ending y location: <span class="code"><code>M10 10 a 1 1 45 1 1 100 10</code></span></li>
+</ul>
+
+<p>Specifying <code>rx</code> and <code>ry</code>, values 1 and 1. And ending point of 100, <code>dx</code> and 0, <code>dy</code> are used.</p>
 
 <div class="html">
     &lt;svg width="400" height="150"&gt;
@@ -851,7 +881,7 @@ long either of those circles there are two possible paths that you can take to c
 </div>
 
 
-<p>Set a different y ending position</p>
+<p>Same as the image above but with an ending y position, <code>dy</code>, set.</p>
 
 <div class="html">
     &lt;svg width="400" height="150"&gt;
@@ -867,8 +897,7 @@ long either of those circles there are two possible paths that you can take to c
     &lt;/svg&gt;
 </div>
 
-
-<p>The third parameter describes the rotation of the arc</p>
+<p>Rotates the arch, <code>x-axis-rotation</code>, at an increasing angle, i.e. number of degrees.</p>
 
 <div class="html">
     &lt;svg width="650" height="110"&gt;
@@ -891,9 +920,7 @@ long either of those circles there are two possible paths that you can take to c
 </div>
 
 
-<p>The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around.</p>
-
-<p>It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle.</p>
+<p>The last example shows the impact of using different values for the <code>large-arc-flag</code> and <code>sweep-flag</code>. By setting each combination of these values we can see four distinct archs are created.</p>
 
 <div class="html">
     &lt;svg width="460" height="210"&gt;
@@ -909,6 +936,25 @@ long either of those circles there are two possible paths that you can take to c
         &lt;path
             d="M340 110 a 60 60 0 1 1 100 0"
             fill="greenyellow" stroke="greenyellow" /&gt;
+    &lt;/svg&gt;
+</div>
+
+<p>The same image but each arch stacked on top of each other.</p>
+
+<div class="html">
+    &lt;svg width="200" height="210"&gt;
+        &lt;path
+            d="M10 110 a 60 60 0 0 0 100 0"
+            fill="aqua" stroke="aqua" /&gt;
+        &lt;path
+            d="M10 110 a 60 60 0 1 1 100 0"
+            fill="greenyellow" stroke="greenyellow" /&gt;
+        &lt;path
+            d="M10 110 a 60 60 0 0 1 100 0"
+            fill="aquamarine" stroke="aquamarine" /&gt;
+        &lt;path
+            d="M10 110 a 60 60 0 1 0 100 0"
+            fill="palegreen" fill-opacity=".5" stroke="palegreen" /&gt;
     &lt;/svg&gt;
 </div>
 
