@@ -1,3 +1,6 @@
+Todo:
+   - get anthony's link
+   - think what will be said at each section
 
 First explain the agenda
     - Introduce to codepen
@@ -5,6 +8,7 @@ First explain the agenda
     - Experiment in codepen and follow reference for 10 minutes
     - Repeat with next shape
     - Last 45 minutes to create something
+    - Experiment! Try different things and see what happens. You don't need to understand everything before trying something. Just start trying.
 
 Not going to work through the entire reference
 Can be confusing, lots of ways to do accomplish the same thing
@@ -16,6 +20,11 @@ Codepen
     - Maximize HTML
     - Adjust layout (bottom/side)
     - Drag to adjust size
+Beginning
+    - Elements. Written using angle brackets.
+        - Have a start and an end
+        - Content goes between them
+        - If there isn't content they can close immediately (explain when drawing a line)
 
 Learn more by looking at https://developer.mozilla.org/en-US/docs/Web/SVG
 Can look intimidating. But experiment to figure it out. Search for example usages.

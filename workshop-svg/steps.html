@@ -36,78 +36,69 @@
     </head>
     <body>
 
-<p>All images need to be drawn within an area. The area is created with a width and an height.</p>
+<h1>Using SVG to draw images</h1>
+
+<h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">Drawing area</a></h2>
+
+<p>All images need to be drawn within an area. A <code>svg</code> element is used to make this area. The area is created with a <code>width</code> and a <code>height</code>. The width and height are attributes of the <code>svg</code> element.</p>
 
 <div class="html">
-    &lt;svg width="400" height="400"&gt;
+    &lt;svg width="400" height="50"&gt;
     &lt;/svg&gt;
 </div>
 
-<svg width="500" height="310">
-  <defs>
-    <marker id="arrowhead" markerWidth="5" markerHeight="3"
-            refX="0" refY="1.5" orient="auto">
-      <polygon points="0 0, 3 1.5, 0 3" />
-    </marker>
-  </defs>
+<svg width="520" height="310">
+  <text x="120" y="25" font-size="25" textLength="300"
+        stroke="black"
+        lengthAdjust="spacing">width</text>
 
-  <line x1="50" y1="15" x2="220" y2="15"
-        stroke="black" stroke-width="5" stroke-linecap="round" />
-  <text x="230" y="25" font-size="45">x</text>
-  <line x1="265" y1="15" x2="460" y2="15"
-        stroke="black" stroke-width="5" stroke-linecap="round"
-        marker-end="url(#arrowhead)" />
+  <text font-size="25" textLength="200" 
+        stroke="black" 
+        lengthAdjust="spacing" rotate="-90"
+        transform="translate(5 90) rotate(90)">height</text>
 
 
-  <line x1="15" y1="50" x2="15" y2="150"
-        stroke="black" stroke-width="5" stroke-linecap="round" />
-  <text x="5" y="180" font-size="45">y</text>
-  <line x1="15" y1="200" x2="15" y2="280"
-        stroke="black" stroke-width="5" stroke-linecap="round"
-        marker-end="url(#arrowhead)" />
-
-  <rect x="50" y="50" width="425" height="250"
+  <rect x="50" y="50" width="450" height="250"
         fill="transparent" stroke="black" />
-  
 </svg>
 
-<p>Graph</p>
+<p>When an item is placed in the drawing area its location needs to be set. The direction to the right is specified with one value. This value is represented by 'x'. The direction down is another value, represented by 'y'. In the example below the <code>width</code> of the drawing area is 100 and the <code>height</code> 50. Therefore valid values for <code>x</code> can be anywhere between 0 and 100 and valid <code>y</code> values between 0 and 50.</p>
 
-<svg width="500" height="310">
+<svg width="520" height="310">
   <defs>
-    <marker id="arrowhead" markerWidth="5" markerHeight="3"
+    <marker id="ArrowHead" markerWidth="5" markerHeight="3"
             refX="0" refY="1.5" orient="auto">
       <polygon points="0 0, 3 1.5, 0 3" />
     </marker>
   </defs>
 
-  <line x1="50" y1="15" x2="220" y2="15"
+  <line x1="50" y1="15" x2="240" y2="15"
         stroke="black" stroke-width="5" stroke-linecap="round" />
-  <text x="230" y="25" font-size="45">x</text>
-  <line x1="265" y1="15" x2="460" y2="15"
+  <text x="250" y="25" font-size="45">x</text>
+  <line x1="285" y1="15" x2="480" y2="15"
         stroke="black" stroke-width="5" stroke-linecap="round"
-        marker-end="url(#arrowhead)" />
-
+        marker-end="url(#ArrowHead)" />
 
   <line x1="15" y1="50" x2="15" y2="150"
         stroke="black" stroke-width="5" stroke-linecap="round" />
   <text x="5" y="180" font-size="45">y</text>
   <line x1="15" y1="200" x2="15" y2="280"
         stroke="black" stroke-width="5" stroke-linecap="round"
-        marker-end="url(#arrowhead)" />
+        marker-end="url(#ArrowHead)" />
 
-  <rect x="50" y="50" width="425" height="250"
+
+  <rect x="50" y="50" width="450" height="250"
         fill="transparent" stroke="black" />
-  
-  <line x1="50" y1="75" x2="475" y2="75" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="100" x2="475" y2="100" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="125" x2="475" y2="125" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="150" x2="475" y2="150" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="175" x2="475" y2="175" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="200" x2="475" y2="200" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="225" x2="475" y2="225" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="250" x2="475" y2="250" stroke="black" stroke-opacity=".2" stroke-width="1" />
-  <line x1="50" y1="275" x2="475" y2="275" stroke="black" stroke-opacity=".2" stroke-width="1" />
+
+  <line x1="50" y1="75" x2="500" y2="75" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="100" x2="500" y2="100" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="125" x2="500" y2="125" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="150" x2="500" y2="150" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="175" x2="500" y2="175" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="200" x2="500" y2="200" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="225" x2="500" y2="225" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="250" x2="500" y2="250" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="275" x2="500" y2="275" stroke="black" stroke-opacity=".2" stroke-width="1" />
   
   <line x1="75" y1="50" x2="75" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
   <line x1="100" y1="50" x2="100" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
@@ -125,6 +116,74 @@
   <line x1="400" y1="50" x2="400" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
   <line x1="425" y1="50" x2="425" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
   <line x1="450" y1="50" x2="450" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="475" y1="50" x2="475" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+
+  <text x="45" y="45" font-size="15">0</text>
+  <text x="90" y="45" font-size="15">10</text>
+  <text x="140" y="45" font-size="15">20</text>
+  <text x="190" y="45" font-size="15">30</text>
+  <text x="240" y="45" font-size="15">40</text>
+  <text x="290" y="45" font-size="15">50</text>
+  <text x="340" y="45" font-size="15">60</text>
+  <text x="390" y="45" font-size="15">70</text>
+  <text x="440" y="45" font-size="15">90</text>
+  <text x="490" y="45" font-size="15">100</text>
+  
+  <text x="35" y="55" font-size="15">0</text>
+  <text x="30" y="105" font-size="15">10</text>
+  <text x="30" y="155" font-size="15">20</text>
+  <text x="30" y="205" font-size="15">30</text>
+  <text x="30" y="255" font-size="15">40</text>
+  <text x="30" y="305" font-size="15">50</text>
+</svg>
+
+<p>A point on the drawing area is represented by a point (x, y). The example below shows the point (10, 15).</p>
+
+<svg width="520" height="310">
+  <line x1="50" y1="15" x2="240" y2="15"
+        stroke="black" stroke-width="5" stroke-linecap="round" />
+  <text x="250" y="25" font-size="45">x</text>
+  <line x1="285" y1="15" x2="480" y2="15"
+        stroke="black" stroke-width="5" stroke-linecap="round"
+        marker-end="url(#ArrowHead)" />
+
+  <line x1="15" y1="50" x2="15" y2="150"
+        stroke="black" stroke-width="5" stroke-linecap="round" />
+  <text x="5" y="180" font-size="45">y</text>
+  <line x1="15" y1="200" x2="15" y2="280"
+        stroke="black" stroke-width="5" stroke-linecap="round"
+        marker-end="url(#ArrowHead)" />
+
+  <rect x="50" y="50" width="450" height="250"
+        fill="transparent" stroke="black" />
+  
+  <line x1="50" y1="75" x2="500" y2="75" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="100" x2="500" y2="100" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="125" x2="500" y2="125" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="150" x2="500" y2="150" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="175" x2="500" y2="175" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="200" x2="500" y2="200" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="225" x2="500" y2="225" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="250" x2="500" y2="250" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="275" x2="500" y2="275" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  
+  <line x1="75" y1="50" x2="75" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="100" y1="50" x2="100" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="125" y1="50" x2="125" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="150" y1="50" x2="150" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="175" y1="50" x2="175" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="200" y1="50" x2="200" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="225" y1="50" x2="225" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="250" y1="50" x2="250" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="275" y1="50" x2="275" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="300" y1="50" x2="300" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="325" y1="50" x2="325" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="350" y1="50" x2="350" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="375" y1="50" x2="375" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="400" y1="50" x2="400" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="425" y1="50" x2="425" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="450" y1="50" x2="450" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="475" y1="50" x2="475" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
   
   <text x="45" y="45" font-size="15">0</text>
   <text x="90" y="45" font-size="15">10</text>
@@ -135,6 +194,78 @@
   <text x="340" y="45" font-size="15">60</text>
   <text x="390" y="45" font-size="15">70</text>
   <text x="440" y="45" font-size="15">90</text>
+  <text x="490" y="45" font-size="15">100</text>
+  
+  <text x="35" y="55" font-size="15">0</text>
+  <text x="30" y="105" font-size="15">10</text>
+  <text x="30" y="155" font-size="15">20</text>
+  <text x="30" y="205" font-size="15">30</text>
+  <text x="30" y="255" font-size="15">40</text>
+  <text x="30" y="305" font-size="15">50</text>
+
+  <text x="60" y="105" font-size="22" stroke="cadetblue">(10, 15)</text>
+  <circle cx="100" cy="125" r="8" fill="cadetblue" />
+</svg>
+
+<p>A line can be created between two points. The line starts at the point (10, 15) and ends at the point (75, 40).</p>
+
+<svg width="520" height="310">
+  <line x1="50" y1="15" x2="240" y2="15"
+        stroke="black" stroke-width="5" stroke-linecap="round" />
+  <text x="250" y="25" font-size="45">x</text>
+  <line x1="285" y1="15" x2="480" y2="15"
+        stroke="black" stroke-width="5" stroke-linecap="round"
+        marker-end="url(#ArrowHead)" />
+
+
+  <line x1="15" y1="50" x2="15" y2="150"
+        stroke="black" stroke-width="5" stroke-linecap="round" />
+  <text x="5" y="180" font-size="45">y</text>
+  <line x1="15" y1="200" x2="15" y2="280"
+        stroke="black" stroke-width="5" stroke-linecap="round"
+        marker-end="url(#ArrowHead)" />
+
+  <rect x="50" y="50" width="450" height="250"
+        fill="transparent" stroke="black" />
+  
+  <line x1="50" y1="75" x2="500" y2="75" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="100" x2="500" y2="100" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="125" x2="500" y2="125" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="150" x2="500" y2="150" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="175" x2="500" y2="175" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="200" x2="500" y2="200" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="225" x2="500" y2="225" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="250" x2="500" y2="250" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="50" y1="275" x2="500" y2="275" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  
+  <line x1="75" y1="50" x2="75" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="100" y1="50" x2="100" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="125" y1="50" x2="125" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="150" y1="50" x2="150" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="175" y1="50" x2="175" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="200" y1="50" x2="200" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="225" y1="50" x2="225" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="250" y1="50" x2="250" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="275" y1="50" x2="275" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="300" y1="50" x2="300" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="325" y1="50" x2="325" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="350" y1="50" x2="350" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="375" y1="50" x2="375" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="400" y1="50" x2="400" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="425" y1="50" x2="425" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="450" y1="50" x2="450" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  <line x1="475" y1="50" x2="475" y2="300" stroke="black" stroke-opacity=".2" stroke-width="1" />
+  
+  <text x="45" y="45" font-size="15">0</text>
+  <text x="90" y="45" font-size="15">10</text>
+  <text x="140" y="45" font-size="15">20</text>
+  <text x="190" y="45" font-size="15">30</text>
+  <text x="240" y="45" font-size="15">40</text>
+  <text x="290" y="45" font-size="15">50</text>
+  <text x="340" y="45" font-size="15">60</text>
+  <text x="390" y="45" font-size="15">70</text>
+  <text x="440" y="45" font-size="15">90</text>
+  <text x="490" y="45" font-size="15">100</text>
   
   <text x="35" y="55" font-size="15">0</text>
   <text x="30" y="105" font-size="15">10</text>
@@ -156,7 +287,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line">Lines</a></h2>
 
-<p>Draw lines from first point (x1, y1) to second point (x2, y2)</p>
+<p>Draw lines from the first point (x1, y1) to the second point (x2, y2)</p>
 
 <ul>
 <li>Set the color of the line: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke"><code>stroke="green"</code></a></span></li>
@@ -175,7 +306,7 @@
 
 <ul>
 <li>Line size: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width"><code>stroke-width="10"</code></a></span></li>
-<li>How line starts and ends (values: butt, round, square): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap"><code>stroke-linecap="round"</code></a></span></li>
+<li>How a line starts and ends (values: round and square): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap"><code>stroke-linecap="round"</code></a></span></li>
 <li>Try drawing multiple lines</li>
 </ul>
 
@@ -192,7 +323,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Rectangles</a></h2>
 
-<p>Draw rectangles from upper left point (x, y) with a width and height</p>
+<p>Draw rectangles from upper left point (x, y) with a <code>width</code> and <code>height</code></p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -235,7 +366,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle">Circles</a> &amp; <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse">Ellipses</a></h2>
 
-<p>Draw circles at a point (cx, cy) with a radius</p>
+<p>Draw circles at a point (cx, cy) with a radius (the size of the circle).</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -306,7 +437,7 @@
 </div>
 
 
-<p><span class="try">Try</span> using the other attributes you&rsquo;ve learned.</p>
+<p><span class="try">Try</span> using the other attributes you've learned.</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -321,14 +452,14 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">Transform</a></h2>
 
-<p>Transforms modify the position of items they are applied to. The three transforms are translate, scale and rotate.</p>
+<p>Transforms modify the position of items they are applied to. The three transforms are <code>translate</code>, <code>scale</code> and <code>rotate</code>.</p>
 
 <h3>Translate</h3>
 
-<p>Translate moves the item to a new (x, y) point. If a rectangle is positioned at (5, 10) and a translation of (2, 3) is applied to it then the rectangle's new position is (7, 13).</p>
+<p><code>Translate</code> moves the item to a new (x, y) point. If a rectangle is positioned at (5, 10) and a translation of (2, 3) is applied to it then the rectangle's new position is (7, 13).</p>
 
 <ul>
-<li>Movie item to new point: <span class="code"><code>transform="translate(10 10)"</code></span></li>
+<li>Move item to a new point: <span class="code"><code>transform="translate(10 10)"</code></span></li>
 </ul>
 
 <div class="html">
@@ -343,10 +474,10 @@
 
 <h3>Scale</h3>
 
-<p>Scale changes the size of the item. The size can be changed in both the x and y direction. When a scale is applied to an item, for example a rectangle, then it is not only applied to the width and height of the rectangle but also to its (x, y) position.
+<p><code>Scale</code> changes the size of the item. The size can be changed in both the x and y direction. When a <code>scale</code> is applied to an item, for example a rectangle, then it is not only applied to the <code>width</code> and <code>height</code> of the rectangle but also to its (x, y) position.
 
 <ul>
-<li>Make image twice as big: <span class="code"><code>transform="scale(2 2)"</code></span></li>
+<li>Make an image twice as big: <span class="code"><code>transform="scale(2 2)"</code></span></li>
 </ul>
 
 <div class="html">
@@ -359,12 +490,12 @@
     &lt;/svg&gt;
 </div>
 
-<p>Notice that the (x, y) position of the rectangle the transform was applied to has half the expected values. This is because the scale double these values as well, which results in the actual (x, y) values of (110, 40).</p>
+<p>Notice that the (x, y) position of the rectangle the transform was applied to has been halved. This is because the <code>scale</code> doubled these values as well, which results in the actual (x, y) value of (110, 40).</p>
 
-<p>This can be avoided if we use <span class="code"><code>translate</code></span> to position the item, the scale transform does not impact the translate transform like it does the (x, y) position of the time.</p>
+<p>This can be avoided if we use <span class="code"><code>translate</code></span> to position the item, the <code>scale</code> transform does not impact the translate transform like it does the (x, y) position.</p>
 
 <ul>
-<li>Position item with translate and scale it: <span class="code"><code>transform="translate(110 40) scale(2 2)"</code></span></li>
+    <li>Position item with <code>translate</code> and <code>scale</code> it: <span class="code"><code>transform="translate(110 40) scale(2 2)"</code></span></li>
 </ul>
 
 <div class="html">
@@ -380,7 +511,7 @@
 
 <h3>Rotate</h3>
 
-<p>Rotates an item a number of degrees at a point (x, y).</p>
+<p><code>Rotate</code> an item a number of degrees at a point (x, y).</p>
 
 <ul>
 <li>Rotate 45 degrees at the point (100, 30): <span class="code"><code>transform="rotate(45 100 30)"</code></span></li>
@@ -402,7 +533,7 @@
 
 <h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">Animate an attribute</a></h3>
 
-<p>Changes an attribute of an item over a length of time. For example, the width of a rectangle can grow from a smaller size to a larger size. We use the <code>animate</code> within an item and the <code>attributeName</code> attribute to tell what attribute of the item to animate. We will tell the animation the beginning value, <code>from</code>, the ending value, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
+<p>Changes an attribute of an item over a length of time. For example, the width of a rectangle can grow from a smaller size to a larger size. We use the <code>animate</code> within an item and the <code>attributeName</code> attribute to say what attribute of the item to animate. We will tell the animation the beginning value, <code>from</code>, the ending value, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
 
 <ul>
 <li>Attribute to animate: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeName"><code>attributeName="width"</code></a></span></li>
@@ -449,14 +580,13 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> animating the font-size, rotate and stroke-width attributes of a text item. <span class="try">Try</span> animating other items and attributes.</p>
+<p><span class="try">Try</span> animating the <code>font-size</code>, <code>rotate</code> and <code>stroke-width</code> attributes of a text item. <span class="try">Try</span> animating other items and attributes.</p>
 
 
 <h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animateTransform">Animation transforms</a></h3>
 <h4>Translate</h4>
 
-<p>Move an item from one location to another and have the movement occur over a length of time.
-The type of movement we will perform is called <code>translate</code>. Similarly to the <code>animate</code> element we will tell the animation what point to begin, <code>from</code>, what point to end, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
+<p>Move an item from one location to another and have the movement occur over a length of time. The type of movement we will perform is called <code>translate</code>. Similarly to the <code>animate</code> element we will tell the animation what point to begin, <code>from</code>, what point to end, <code>to</code>, and the number of seconds, <code>dur</code>, for it to take.</p>
 
 <ul>
 <li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="translate"</code></a></span></li>
@@ -482,7 +612,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h4>Rotate</h4>
 
-<p>Rotates an item from a starting degree at an (x, y) point to an ending degree to another (x, y) point.</p>
+<p><code>Rotate</code> an item from a starting degree at an (x, y) point to an ending degree at another (x, y) point.</p>
 
 <ul>
 <li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="rotate"</code></a></span></li>
@@ -505,7 +635,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h4>Scale</h4>
 
-<p>Changes the size of an item. Once again, when an item is scaled the items position will also change. Therefore we once again use the <code>translate</code> transform to position the item. For the animation there is one additional attribute which needs to be set. The <code>additive</code> attribute will be set to <code>sum</code>, so that the animation does not override the position set.</p>
+<p><codeScale</code> changes the size of an item. Once again, when an item is scaled the item's position will also change. Therefore we once again use the <code>translate</code> transform to position the item. For the animation there is one additional attribute which needs to be set. The <code>additive</code> attribute will be set to <code>sum</code>, so that the animation does not override the position set.</p>
 
 <ul>
 <li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="scale"</code></a></span></li>
@@ -571,7 +701,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">Linear</a></h3>
 
-<p>Gradients transition an item from one color to another color. <code>Linear</code> gradients transition the color in a straight line from left to right by default. The first <code>offset</code> is used to specify what percent along the straight line the color should begin the transition. The next <code>offset</code> is when the next color will end the transition.</p>
+<p>Gradients transition an item from one color to another color. <code>Linear</code> gradients transition the color in a straight line, from left to right by default. The first <code>offset</code> is used to specify what percent along the straight line the color should begin the transition. The next <code>offset</code> is when the next color will end the transition.</p>
 
 <p>The gradient information is specified by itself in a <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">defs</a></code> section, definition section. Each definition has an <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/id">id</a></code> attribute which then can be used on an item to apply the gradient to that item.</p>
 
@@ -616,8 +746,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p><span class="try">Try</span> different <code>offset</code> values and including additional offsets.</p>
 
-<p>The direction of the gradient can be specified, so it is not applied in a different direction than left to right. The direction can be specified in an x and y direction using values from 0 to 1, where 1 means it will be applied to the item completely in that direction.
-</p>
+<p>The direction of the gradient can be specified, so it is applied in a different direction than left to right. The direction can be specified in both an x and y direction using values from 0 to 1, where 1 means it will be applied to the item completely in that direction.</p>
 
 <ul>
 <li>Apply gradient from upper left to bottom right: <span class="code"><code>x1="0" y1="0" x2="1" y2="1"</code></span></li>
@@ -648,9 +777,9 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/radialGradient">Radial</a></h3>
 
-<p>Radial gradients transition from one color to another starting at a point and moving outwards in all directions. Radial gradients are specified the same way as linear gradients.</p>
+<p><code>Radial</code> gradients transition from one color to another starting at a point and moving outwards in all directions. <code>Radial</code> gradients are specified the same way as <code>linear</code> gradients.</p>
 
-<p>An opacity, making the color see through, can also be used with a gradient.</p>
+<p>An <code>opacity</code>, making the color see through, can also be used with a gradient.</p>
 
 <ul>
 <li>Make it see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-opacity"><code>stop-opacity=".8"</code></a></span></li>
@@ -728,10 +857,10 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">Filters</a></h2>
 
-<p>Filters provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">This is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
+<p><code>Filters</code> provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">This is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
 
 <ul>
-<li>How much to blur the image. If one value is supplied to blur both the x and y directions the same, else use first value for the x direction and the second value for the y direction: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
+<li>How much to blur the image. If one value is supplied then both the x and y directions are blurred the same, else the first value will blur the x direction and the second value the y direction: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
 </ul>
 
 <div class="html">
@@ -752,7 +881,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> applying this filter to an item you create. Adjust the <code>stdDeviation</code> value to see how it affects your item.</p>
+<p><span class="try">Try</span> applying this filter to an item you create. Adjust the <code>stdDeviation</code> value to see how it effects your item.</p>
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">Groups</a> and <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">Use</a></h2>
 
@@ -773,7 +902,7 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p>A group can also be defined and then used elsewhere. The group can also be used multiple times.</p>
 
-<p>In this example a group of circles are defined. Then the group is used twice, but they are place at different positions and are rotated differently.</p>
+<p>In this example a group of circles is defined. Then the group is used twice, but they are placed at different positions and are rotated differently.</p>
 
 <ul>
 <li>Define a group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">g id="DotsTransformed"</a></code></span></li>
@@ -800,11 +929,11 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">Viewbox</a></h2>
 
-<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. The first two values is the (x, y) point to begin viewing the image at. For example, if an image has a width of 100 and height of 100 then if a <code>viewBox</code> of <code>10 10</code> is used then the view of the image will be shifted both in the x and y positions 10 points into the image.</p>
+<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. The first two values is the (x, y) point to begin viewing the image at. For example, if an image has a <code>width</code> of 100 and <code>height</code> of 100 then if a <code>viewBox</code> of <code>10 10</code> is used the view of the image will be shifted both in the x and y positions 10 spots into the image.</p>
 
-<p>The next two values are the width and height of the view. If these values are the same as the image then the image is not changed. If the values are smaller than the image then in effect the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
+<p>The next two values are the <code>width</code> and <code>height</code> of the view. If these values are the same as the image then the image is not changed. If the values are smaller than the image then, in effect, the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
 
-<p>In this example the view of the first image has not been change. In the second the image is zoomed in. And in the third the image is zoomed out.
+<p>In this example the view of the first image has not been changed. In the second the image is zoomed in. And in the third the image is zoomed out.
 
 <div class="html">
     &lt;svg width="150" height="150" viewBox="0 0 150 150"&gt;
@@ -864,6 +993,15 @@ The type of movement we will perform is called <code>translate</code>. Similarly
 
 <p><span class="try">Try</span> different <code>viewBox</code> widths and heights. Also <span class="try">try</span> different starting points for viewing the image.</p>
 
+
+<h2>References</h2>
+
+<ul>
+    <li><a target="blank" href="https://codepen.io/#">CodePen</a></li>
+    <li><a target="blank" href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">Colors</a></li>
+    <li><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">Tutorial</a></li>
+    <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Online editor (Chrome browser only)</a></li>
+<ul>
 
         <script>
             window.klipse_settings = {
