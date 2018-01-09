@@ -2,29 +2,59 @@ Todo:
    - get anthony's link
    - think what will be said at each section
 
-First explain the agenda
-    - Introduce to codepen
-    - Introduce shape for a couple minutes
-    - Experiment in codepen and follow reference for 10 minutes
-    - Repeat with next shape
-    - Last 45 minutes to create something
-    - Experiment! Try different things and see what happens. You don't need to understand everything before trying something. Just start trying.
+Prep
+----
 
-Not going to work through the entire reference
+- Use screencast cursor
+- Chrome incognito at CodePen home page
+- Chrome logged in at CodePen on new pen
+- Chrome with reference site pulled up
+
+Agenda overview
+---------------
+
+- Find a computer
+- I'll show what we will be using
+- Make sure everyone can see the same thing on their computer
+- Basic understanding of how we'll draw
+- I'll show a shape, then you'll spend time to try it out, if you have questions get Erica's my attention (Repeat)
+- See how far we'll get, we won't go through the whole reference
+- Last 45 minutes you'll create something from what you've learned
+- Perhaps share what we created
+- Experiment! Try different things and see what happens. You don't need to understand everything before trying something. Just start trying.
+
+Agenda
+------
+
+- Introduce to codepen (in Chrome as private)
+    - Anonymous (can create a new tab for each pen you create)
+        - Maximize HTML
+        - Drag divider
+        - Change view
+        - Will auto save (type something)
+    - Switch to Chrome with (for light theme)
+- Show reference
+    - Again, not going to cover the whole thing
+    - Go over drawing area
+        - Elements. Written using angle brackets.
+            - Have a start and an end
+            - Content goes between them
+            - If there isn't content they can close immediately (explain when drawing a line)
+    - Get to lines
+        - To get you going
+    - Can copy pieces out (Show this)
+        - Can modify there but better to become familar with CodePen.
+    - Try label: things to experiment, but not limited to this
+
+
+
+
 Can be confusing, lots of ways to do accomplish the same thing
-
 SVG: it's scable, can make the image bigger or smaller without imaging becoming blurry
 
-Codepen
-    - Creating new
-    - Maximize HTML
-    - Adjust layout (bottom/side)
-    - Drag to adjust size
-Beginning
-    - Elements. Written using angle brackets.
-        - Have a start and an end
-        - Content goes between them
-        - If there isn't content they can close immediately (explain when drawing a line)
+
+
+
 
 Learn more by looking at https://developer.mozilla.org/en-US/docs/Web/SVG
 Can look intimidating. But experiment to figure it out. Search for example usages.
