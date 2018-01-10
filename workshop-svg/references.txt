@@ -40,12 +40,13 @@ Agenda
             - Have a start and an end
             - Content goes between them
             - If there isn't content they can close immediately (explain when drawing a line)
-    - Get to lines
-        - To get you going
+- Lines
+    - To get you going
     - Can copy pieces out (Show this)
         - Can modify there but better to become familar with CodePen.
+    - Element with properties. Self closing.
     - Try label: things to experiment, but not limited to this
-
+- Rectangles
 
 
 

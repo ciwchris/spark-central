@@ -67,7 +67,7 @@
   <defs>
     <marker id="ArrowHead" markerWidth="5" markerHeight="3"
             refX="0" refY="1.5" orient="auto">
-      <polygon points="0 0, 3 1.5, 0 3" />
+      <polygon points="0,0 3,1.5 0,3" />
     </marker>
   </defs>
 
@@ -336,8 +336,8 @@
 <ul>
 <li>Round corners: <span class="code"><code>rx="5" ry="5"</code></span></li>
 <li>Color: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill"><code>fill="dimgray"</code></a></span></li>
-<li>Transparent: <span class="code"><code>fill="transparent"</code></span></li>
 <li>Border color and size: <span class="code"><code>stroke="orchid" stroke-width="5"</code></span></li>
+<li>Transparent: <span class="code"><code>fill="transparent"</code></span></li>
 <li>Make it see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-opacity"><code>fill-opacity=".5"</code></a></span></li>
 <li>Also make borders see through (values: 0.0-1.0): <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/opacity"><code>opacity=".5"</code></a></span></li>
 </ul>
@@ -526,7 +526,7 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> applying transforms to different shapes: circles, ellipses and text. Include other attributes you have learned while you experiment.</p>
+<p><span class="try">Try</span> applying transforms to different shapes: <code>circle</code>, <code>ellipse</code> and <code>text</code>. Include other attributes you have learned while you experiment.</p>
 
 <h2>Animation</h2>
 
@@ -688,7 +688,7 @@
 <div class="html">
     &lt;svg width="400" height="200"&gt;
         &lt;polygon
-            points="0 50 30 100 80 60 120 80 200 50 120 20 80 40 30 0"
+            points="0,50 30,100 80,60 120,80 200,50 120,20 80,40 30,0"
             fill="paleturquoise"
             transform="translate(200 0) rotate(90)" /&gt;
     &lt;/svg&gt;
@@ -847,7 +847,7 @@
         &lt;/defs&gt;
 
         &lt;polygon
-            points="0 50 30 100 80 60 120 80 200 50 120 20 80 40 30 0"
+            points="0,50 30,100 80,60 120,80 200,50 120,20 80,40 30,0"
             fill="url(#PolygonGradient)"
             transform="translate(200 0) rotate(90)" /&gt;
     &lt;/svg&gt;
@@ -859,22 +859,29 @@
 <p><code>Filters</code> provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">This is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
 
 <ul>
-<li>How much to blur the image. If one value is supplied then both the x and y directions are blurred the same, else the first value will blur the x direction and the second value the y direction: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
+<li>How much to blur the image: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
+    <ul>
+        <li>If one value is supplied then both the x and y directions are blurred the same, else the first value will blur the x direction and the second value the y direction</li>
+    </ul>
 </ul>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
+        &lt;defs&gt;
+            &lt;filter id="SameBlur"&gt;
+                &lt;feGaussianBlur stdDeviation="5" /&gt;
+            &lt;/filter&gt;
+
+            &lt;filter id="DifferingBlur"&gt;
+                &lt;feGaussianBlur stdDeviation="5 0" /&gt;
+            &lt;/filter&gt;
+        &lt;/defs&gt;
+
         &lt;circle cx="50" cy="50" r="40" fill="springgreen"/&gt;
 
-        &lt;filter id="SameBlur"&gt;
-            &lt;feGaussianBlur stdDeviation="5" /&gt;
-        &lt;/filter&gt;
         &lt;circle cx="150" cy="50" r="40" fill="springgreen"
             filter="url(#SameBlur)"/&gt;
 
-        &lt;filter id="DifferingBlur"&gt;
-            &lt;feGaussianBlur stdDeviation="5 0" /&gt;
-        &lt;/filter&gt;
         &lt;circle cx="250" cy="50" r="40" fill="springgreen"
             filter="url(#DifferingBlur)"/&gt;
     &lt;/svg&gt;
@@ -928,15 +935,13 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">Viewbox</a></h2>
 
-<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. The first two values is the (x, y) point to begin viewing the image at. For example, if an image has a <code>width</code> of 100 and <code>height</code> of 100 then if a <code>viewBox</code> of <code>10 10</code> is used the view of the image will be shifted both in the x and y positions 10 spots into the image.</p>
-
-<p>The next two values are the <code>width</code> and <code>height</code> of the view. If these values are the same as the image then the image is not changed. If the values are smaller than the image then, in effect, the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
+<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. We'll first look at the last two values of the attribute. The last two values are the <code>width</code> and <code>height</code> of the view. If these values are the same as the image then the image is not changed. If the values are smaller than the image then, in effect, the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
 
 <p>In this example the view of the first image has not been changed. In the second the image is zoomed in. And in the third the image is zoomed out.
 
 <div class="html">
     &lt;svg width="150" height="150" viewBox="0 0 150 150"&gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="100%" height="100%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen"/&gt;
@@ -944,7 +949,7 @@
             fill="greenyellow" /&gt;
     &lt;/svg&gt;
     &lt;svg width="150" height="150" viewBox="0 0 100 100" &gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="100%" height="100%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen"/&gt;
@@ -952,7 +957,7 @@
             fill="greenyellow" /&gt;
     &lt;/svg&gt;
     &lt;svg width="150" height="150" viewBox="0 0 200 200" &gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="100%" height="100%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen"/&gt;
@@ -961,11 +966,13 @@
     &lt;/svg&gt;
 </div>
 
+<p>Now let's go back and look at the first two values. These values make up the (x, y) point to begin viewing the image at. For example, if an image has a <code>width</code> of 100 and <code>height</code> of 100 then if a <code>viewBox</code> of <code>10 10</code> is used the view of the image will be shifted both in the x and y positions 10 spots into the image.</p>
+
 <p>This example is the same as the one above except an initial viewing point has been specified for each image, which shifts the view of the image to the right and down.</p>
 
 <div class="html">
     &lt;svg width="150" height="150" viewBox="40 40 150 150"&gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="150%" height="150%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen"/&gt;
@@ -973,7 +980,7 @@
             fill="greenyellow" /&gt;
     &lt;/svg&gt;
     &lt;svg width="150" height="150" viewBox="30 30 100 100" &gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="150%" height="150%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen" /&gt;
@@ -981,7 +988,7 @@
             fill="greenyellow" /&gt;
     &lt;/svg&gt;
     &lt;svg width="150" height="150" viewBox="50 50 200 200" &gt;
-        &lt;rect width="200%" height="200%" fill="lightsteelblue"/&gt;
+        &lt;rect width="150%" height="150%" fill="lightsteelblue"/&gt;
         &lt;rect x="5" y="5" rx="5" ry="5"
             width="75" height="75"
             fill="springgreen"/&gt;
