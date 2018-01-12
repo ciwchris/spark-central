@@ -40,7 +40,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg">Drawing area</a></h2>
 
-<p>All images need to be drawn within an area. A <code>svg</code> element is used to make this area. The area is created with a <code>width</code> and a <code>height</code>. The width and height are attributes of the <code>svg</code> element.</p>
+<p>All images need to be drawn within an area. A <code>svg</code> element is used to make this area. The area is created with a <code>width</code> and a <code>height</code>. The width and height are <em>attributes</em> of the <code>svg</code> <em>element</em>.</p>
 
 <div class="html">
     &lt;svg width="100" height="50"&gt;
@@ -276,10 +276,10 @@
   <text x="60" y="105" font-size="22" stroke="cadetblue">(10, 15)</text>
   <circle cx="100" cy="125" r="8" fill="cadetblue" />
 
-  <line x1="100" y1="125" x2="425" y2="225" stroke="cadetblue" stroke-width="5" />
+  <line x1="100" y1="125" x2="425" y2="250" stroke="cadetblue" stroke-width="5" />
   
-  <text x="400" y="205" font-size="22" stroke="cadetblue">(75, 40)</text>
-  <circle cx="425" cy="225" r="8" fill="cadetblue" />
+  <text x="400" y="230" font-size="22" stroke="cadetblue">(75, 40)</text>
+  <circle cx="425" cy="250" r="8" fill="cadetblue" />
 </svg>
 
 
@@ -545,11 +545,10 @@
 <div class="html">
     &lt;svg width="400" height="100"&gt;
       &lt;rect x="100" y="10" width="100" height="50" fill="aliceblue" &gt;
-        &lt;animate 
-          attributeName="width"
-          from="100" to="150"
-          dur="3s"
-          repeatCount="indefinite" /&gt;
+        &lt;animate attributeName="width"
+                    from="100" to="150"
+                    dur="3s"
+                    repeatCount="indefinite" /&gt;
       &lt;/rect&gt;
     &lt;/svg&gt;
 </div>
@@ -600,7 +599,7 @@
         &lt;circle cx="50" cy="30" r="20" fill="yellow"&gt;
             &lt;animateTransform attributeName="transform"
                 type="translate"
-                from="50 0"
+                from="0 0"
                 to="200 0"
                 dur="10s"
                 repeatCount="indefinite" /&gt;
@@ -1007,6 +1006,7 @@
     <li><a target="blank" href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">Colors</a></li>
     <li><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">Tutorial</a></li>
     <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Online editor (Chrome browser only)</a></li>
+    <li><a target="blank" href="http://editor.method.ac/">Method Draw</a> (Online Editor)</li>
 <ul>
 
         <script>

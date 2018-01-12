@@ -9,12 +9,13 @@ Prep
 - Chrome incognito at CodePen home page
 - Chrome logged in at CodePen on new pen
 - Chrome with reference site pulled up
+- Graph paper?
 
 Agenda overview
 ---------------
 
 - Find a computer
-- I'll show what we will be using
+- We'll walk through what we will be using
 - Make sure everyone can see the same thing on their computer
 - Basic understanding of how we'll draw
 - I'll show a shape, then you'll spend time to try it out, if you have questions get Erica's my attention (Repeat)
@@ -48,6 +49,10 @@ Agenda
     - Try label: things to experiment, but not limited to this
 - Rectangles
 
+- End
+    - Congratulations you've now done some web development
+    - Show Method Draw
+        - Show the source code view
 
 
 Can be confusing, lots of ways to do accomplish the same thing
