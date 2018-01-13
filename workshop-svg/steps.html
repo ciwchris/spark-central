@@ -401,7 +401,7 @@
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
-        &lt;text x="20" y="40" font-size="25" &gt;
+        &lt;text x="20" y="40" font-size="25"&gt;
             Let it snow, let it snow, let it snow!
         &lt;/text&gt;
     &lt;/svg&gt;
@@ -451,7 +451,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform">Transform</a></h2>
 
-<p>Transforms modify the position of items they are applied to. The three transforms are <code>translate</code>, <code>scale</code> and <code>rotate</code>.</p>
+<p>Transforms modify the position of items they are applied to. The three transforms we will look at are <code>translate</code>, <code>scale</code> and <code>rotate</code>.</p>
 
 <h3>Translate</h3>
 
@@ -544,7 +544,7 @@
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
-      &lt;rect x="100" y="10" width="100" height="50" fill="aliceblue" &gt;
+      &lt;rect x="100" y="10" width="100" height="50" fill="aliceblue"&gt;
         &lt;animate attributeName="width"
                     from="100" to="150"
                     dur="3s"
@@ -563,7 +563,7 @@
 
 <div class="html">
     &lt;svg width="400" height="75"&gt;
-      &lt;rect x="100" y="10" width="100" height="50" fill="aliceblue" &gt;
+      &lt;rect x="100" y="10" width="100" height="50" fill="aliceblue"&gt;
         &lt;animate 
           attributeName="width"
           from="150" to="0"
@@ -614,8 +614,8 @@
 
 <ul>
 <li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="rotate"</code></a></span></li>
-<li>The beginning degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
-<li>The ending degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
+<li>The beginning degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 25 25"</code></a></span></li>
+<li>The ending degree and (x, y) point: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 25 25"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -639,7 +639,7 @@
 <li>The type of animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/type"><code>type="scale"</code></a></span></li>
 <li>The beginning size in the x and y direction: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/from"><code>from="50 0"</code></a></span></li>
 <li>The ending size in the x and y direction: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/to"><code>to="200 0"</code></a></span></li>
-<li>Use the translate position with the animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive"><code>additive="sum"</code></a></span></li>
+<li>Use the <code>translate</code> position with the animation: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive"><code>additive="sum"</code></a></span></li>
 </ul>
 
 <div class="html">
@@ -659,8 +659,7 @@
 <p><span class="try">Try</span> combining these animations with other items. <span class="try">Try</span> creating multiple items each with their own animation.</p>
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon">Polygon</a></h2>
-<p>Custom shapes can be created by specifying a series of (x, y) 
-<span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/point"><code>points.</code></a></span> The last point will automatically connect to the first point.</p>
+<p>Custom shapes can be created by specifying a series of (x, y) points. The last point will automatically connect to the first point.</p>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
@@ -680,7 +679,7 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> creating your own shape.</p>
+<p><span class="try">Try</span> creating a triangle. <span class="try">Try</span> creating your own shape.</p>
 
 <p>Other attributes can be used with custom shapes. In this example <code>transform</code> is used to <code>translate</code> and <code>rotate</code> the shape.</p>
 
@@ -699,7 +698,7 @@
 
 <h3><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient">Linear</a></h3>
 
-<p>Gradients transition an item from one color to another color. <code>Linear</code> gradients transition the color in a straight line, from left to right by default. The first <code>offset</code> is used to specify what percent along the straight line the color should begin the transition. The next <code>offset</code> is when the next color will end the transition.</p>
+<p>Gradients transition an item from one color to another color. <code>Linear</code> gradients transition the color in a straight line, from left to right by default. The transition from one color to the next is specified using <code>offsets</code>. The first <code>offset</code> is used to specify what percent along the straight line the color should begin the transition. The next <code>offset</code> is when the next color will end the transition.</p>
 
 <p>The gradient information is specified by itself in a <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/defs">defs</a></code> section, definition section. Each definition has an <code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/id">id</a></code> attribute which then can be used on an item to apply the gradient to that item.</p>
 
@@ -910,8 +909,8 @@
 <p>In this example a group of circles is defined. Then the group is used twice, but they are placed at different positions and are rotated differently.</p>
 
 <ul>
-<li>Define a group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">g id="DotsTransformed"</a></code></span></li>
-<li>Use the defined group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">use href="#DotsTransformed"</a></code></span></li>
+<li>Define a group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">&lt;g id="DotsTransformed"</a></code></span></li>
+<li>Use the defined group: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">&lt;use href="#DotsTransformed"</a></code></span></li>
 </ul>
 
 <div class="html">
@@ -934,7 +933,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox">Viewbox</a></h2>
 
-<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. We'll first look at the last two values of the attribute. The last two values are the <code>width</code> and <code>height</code> of the view. If these values are the same as the image then the image is not changed. If the values are smaller than the image then, in effect, the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
+<p>The <code>viewBox</code> attribute allows you to change how the image is viewed. We'll first look at the last two values of the attribute. The last two values are the <code>width</code> and <code>height</code> of the view. If these values are the same as the svg <code>width</code> and <code>height</code> then the image is not changed. If the values are smaller than the svg then, in effect, the image becomes larger, the image is zoomed in. If the values are larger then the image becomes smaller, the image is zoomed out.</p>
 
 <p>In this example the view of the first image has not been changed. In the second the image is zoomed in. And in the third the image is zoomed out.
 
@@ -1003,10 +1002,11 @@
 
 <ul>
     <li><a target="blank" href="https://codepen.io/#">CodePen</a></li>
+    <li><a target="blank" href="https://codepen.io/ciwchris/pen/YrMRbV">Snowman</a></li>
     <li><a target="blank" href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">Colors</a></li>
     <li><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">Tutorial</a></li>
-    <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Online editor (Chrome browser only)</a></li>
     <li><a target="blank" href="http://editor.method.ac/">Method Draw</a> (Online Editor)</li>
+    <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Online editor (Chrome browser only)</a></li>
 <ul>
 
         <script>

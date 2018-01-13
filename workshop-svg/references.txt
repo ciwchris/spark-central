@@ -44,14 +44,39 @@ Agenda
 - Lines
     - To get you going
     - Can copy pieces out (Show this)
-        - Can modify there but better to become familar with CodePen.
+        - Can modify there but better to become familiar with CodePen.
     - Element with properties. Self closing.
     - Try label: things to experiment, but not limited to this
 - Rectangles
-
-- End
+    - 
+- Circles & ellipses
+- Text
+    - font-face: arial, sans-serif, mono
+- Transform
+    - Discuss scaling
+    - Explain rotation point, show halfway down
+- Animation
+    - Call out: rectangle is not self closing, has content
+    - Challenges
+        - Grow the rectangle from both sides
+        - Do we need to use this scale for this example? Why not animate the radius?
+    - Have try with text
+- Polygon
+    - Straight lines
+    - Have try triangle
+- Gradient
+    - Offsets, start and end the transition
+    - Defs section
+    - Changing from to diagonal
+- Filter
+    - Gaussian is the type of blur
+- Groups & Use
+    - Second example uses translate to make the second location easier to specify
+- Viewbox
+- Rap up
     - Congratulations you've now done some web development
     - Show Method Draw
+        - Optionally make a cloud
         - Show the source code view
 
 
@@ -76,3 +101,44 @@ http://svgpocketguide.com/book/
 
 https://en.wikipedia.org/wiki/Web_colors
 https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg
+
+
+<svg width="400" height="250">
+  <defs>
+    <radialGradient id="AnimatedGradientFlower">
+      <stop offset="45%" stop-color="yellow"/>
+      <stop offset="75%" stop-color="yellow" stop-opacity=".8"/>
+      <stop offset="99%" stop-color="greenyellow"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="200" cy="100" rx="20" ry="20" fill="greenyellow" >
+    <animate attributeName="rx"
+             from="20" to="60"
+             dur="5s"
+             repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="200" cy="100" rx="20" ry="20" fill="greenyellow" >
+    <animate attributeName="ry"
+             from="20" to="60"
+             dur="5s"
+             repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="200" cy="100" rx="20" ry="20" fill="greenyellow" transform="rotate(45 200 100)" >
+    <animate attributeName="ry"
+             from="20" to="60"
+             dur="5s"
+             repeatCount="indefinite" />
+  </ellipse>
+  <ellipse cx="200" cy="100" rx="20" ry="20" fill="greenyellow" transform="rotate(-45 200 100)" >
+    <animate attributeName="ry"
+             from="20" to="60"
+             dur="5s"
+             repeatCount="indefinite" />
+  </ellipse>
+  <circle cx="0" cy="0" r="20" fill="url(#AnimatedGradientFlower)" transform="translate(200 100)" >
+    <animate attributeName="r"
+             from="10" to="25"
+             dur="5s"
+             repeatCount="indefinite" />
+  </circle>
+</svg>
