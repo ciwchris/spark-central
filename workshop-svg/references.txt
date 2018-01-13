@@ -1,7 +1,3 @@
-Todo:
-   - get anthony's link
-   - think what will be said at each section
-
 Prep
 ----
 
@@ -46,9 +42,10 @@ Agenda
     - Can copy pieces out (Show this)
         - Can modify there but better to become familiar with CodePen.
     - Element with properties. Self closing.
+    - Drawing off the area (changing the height of the drawing area)
     - Try label: things to experiment, but not limited to this
+    - Click on stroke line cap to show instructions (can be intimidating but look at examples)
 - Rectangles
-    - 
 - Circles & ellipses
 - Text
     - font-face: arial, sans-serif, mono
@@ -65,6 +62,7 @@ Agenda
     - Straight lines
     - Have try triangle
 - Gradient
+    - Id can be whatever you want, be needs to be unique
     - Offsets, start and end the transition
     - Defs section
     - Changing from to diagonal
@@ -73,11 +71,16 @@ Agenda
 - Groups & Use
     - Second example uses translate to make the second location easier to specify
 - Viewbox
-- Rap up
-    - Congratulations you've now done some web development
-    - Show Method Draw
-        - Optionally make a cloud
-        - Show the source code view
+
+
+Rap up
+------
+
+- Congratulations you've now done some web development
+- Show snowman (point out the parts we learned)
+- Show Method Draw
+    - Optionally make a cloud
+    - Show the source code view
 
 
 Can be confusing, lots of ways to do accomplish the same thing

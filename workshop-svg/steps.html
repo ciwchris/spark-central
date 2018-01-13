@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="codemirror.css">
         <link rel="stylesheet" type="text/css" href="tufte.css"/>
 
+        <title>Using SVG to draw images</title>
         <style>
         body {
             padding-left: 0 !important;
@@ -286,7 +287,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line">Lines</a></h2>
 
-<p>Draw lines from the first point (x1, y1) to the second point (x2, y2)</p>
+<p>Draw lines from the first point (x1, y1) to the second point (x2, y2).</p>
 
 <ul>
 <li>Set the color of the line: <span class="code"><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke"><code>stroke="green"</code></a></span></li>
@@ -322,7 +323,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect">Rectangles</a></h2>
 
-<p>Draw rectangles from upper left point (x, y) with a <code>width</code> and <code>height</code></p>
+<p>Draw rectangles from upper left point (x, y) with a <code>width</code> and <code>height</code>.</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -374,7 +375,7 @@
 </div>
 
 
-<p>Draw ellipses at a point (cx, cy) with a both a vertical and horizontal radius (rx, ry)</p>
+<p>Draw ellipses at a point (cx, cy) with both a horizontal and vertical radius (rx, ry).</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -383,7 +384,7 @@
 </div>
 
 
-<p><span class="try">Try</span> using the other attributes you learned with rectangles</p>
+<p><span class="try">Try</span> using the other attributes you learned with rectangles.</p>
 
 <div class="html">
     &lt;svg width="400" height="100"&gt;
@@ -397,7 +398,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text">Text</a></h2>
 
-<p>Add text to images at the point (x, y)</p>
+<p>Add text to images at the point (x, y).</p>
 
 <div class="html">
     &lt;svg width="400" height="50"&gt;
@@ -704,23 +705,23 @@
 
 
 <ul>
-<li>The id of the gradient: <span class="code"><code>linearGradient id="NoBlur"</code></span></li>
-<li>The first offset begins transitioning away from the color darkblue immediately: <span class="code"><code>stop offset="0%" stop-color="darkblue"</code></span></li>
-<li>The next offset ends the color transition, resulting in the color only becoming deepskyblue at the very end of the item: <span class="code"><code>stop offset="100%" stop-color="deepskyblue"</code></span></li>
-<li>The gradient to apply to the item: <span class="code"><code>fill="url(#CompleteGradient)"</code></span></li>
+<li>The id of the gradient: <span class="code"><code>&lt;linearGradient id="IntroGradient"</code></span></li>
+<li>The first offset begins transitioning away from the color darkblue immediately: <span class="code"><code>&lt;stop offset="0%" stop-color="darkblue"</code></span></li>
+<li>The next offset ends the color transition, resulting in the color only becoming deepskyblue at the very end of the item: <span class="code"><code>&lt;stop offset="100%" stop-color="deepskyblue"</code></span></li>
+<li>The gradient to apply to the item: <span class="code"><code>fill="url(#IntroGradient)"</code></span></li>
 </ul>
 
 <div class="html">
     &lt;svg width="250" height="120"&gt;
         &lt;defs&gt;
-            &lt;linearGradient id="CompleteGradient"&gt;
+            &lt;linearGradient id="IntroGradient"&gt;
                 &lt;stop offset="0%" stop-color="darkblue"/&gt;
                 &lt;stop offset="100%" stop-color="deepskyblue"/&gt;
             &lt;/linearGradient&gt;
         &lt;/defs&gt;
 
         &lt;rect x="10" y="10" width="150" height="100"
-            fill="url(#CompleteGradient)"/&gt;
+            fill="url(#IntroGradient)"/&gt;
     &lt;/svg&gt;
 </div>
 
@@ -741,7 +742,7 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> different <code>offset</code> values and including additional offsets.</p>
+<p><span class="try">Try</span> creating your own gradients. <span class="try">Try</span> different <code>offset</code> values and including additional offsets.</p>
 
 <p>The direction of the gradient can be specified, so it is applied in a different direction than left to right. The direction can be specified in both an x and y direction using values from 0 to 1, where 1 means it will be applied to the item completely in that direction.</p>
 
@@ -810,7 +811,7 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> combining gradients with other items you have learned. Here are two examples which include a gradient to an image we've already seen.</p>
+<p><span class="try">Try</span> combining gradients with other items you have learned. Here are two examples which apply a gradient to images we've already seen.</p>
 
 <div class="html">
     &lt;svg width="400" height="150"&gt;
@@ -854,7 +855,7 @@
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter">Filters</a></h2>
 
-<p><code>Filters</code> provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">This is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
+<p><code>Filters</code> provide a way to apply an effect to an image. There are many kinds of filters. <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter#See_also">Here is the list of supported filters</a>. We will only be using a single filter, <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feGaussianBlur">feGaussianBlur</a>, which blurs an item.</p>
 
 <ul>
 <li>How much to blur the image: <span class="code"><code><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation">stdDeviation="5 2"</a></code></span></li>
@@ -885,13 +886,13 @@
     &lt;/svg&gt;
 </div>
 
-<p><span class="try">Try</span> applying this filter to an item you create. Adjust the <code>stdDeviation</code> value to see how it effects your item.</p>
+<p><span class="try">Try</span> applying this filter to an item you create. Adjust the <code>stdDeviation</code> value to see how it affects your item.</p>
 
 <h2><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g">Groups</a> and <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use">Use</a></h2>
 
 <p>Several items can be created within a group. This allows you to treat the entire group as a single item.</p>
 
-<p>In this example four circles are created. Then as a group they are moved to another location and rotated</p>
+<p>In this example four circles are created. Then as a group they are moved to another location and rotated.</p>
 
 <div class="html">
     &lt;svg width="400" height="75"&gt;
@@ -1002,11 +1003,11 @@
 
 <ul>
     <li><a target="blank" href="https://codepen.io/#">CodePen</a></li>
-    <li><a target="blank" href="https://codepen.io/ciwchris/pen/YrMRbV">Snowman</a></li>
     <li><a target="blank" href="https://upload.wikimedia.org/wikipedia/commons/2/2b/SVG_Recognized_color_keyword_names.svg">Colors</a></li>
     <li><a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">Tutorial</a></li>
-    <li><a target="blank" href="http://editor.method.ac/">Method Draw</a> (Online Editor)</li>
-    <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Online editor (Chrome browser only)</a></li>
+    <li><a target="blank" href="https://codepen.io/ciwchris/pen/YrMRbV">Snowman</a></li>
+    <li><a target="blank" href="http://editor.method.ac/">Method Draw</a> (Online editor)</li>
+    <li><a target="blank" href="https://www.janvas.com/v6.1/janvas_app_6.1_public/index.html">Janvas</a> (Online editor - Chrome browser only)</li>
 <ul>
 
         <script>
